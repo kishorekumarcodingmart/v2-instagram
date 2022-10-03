@@ -1,0 +1,11 @@
+.login_with_facebook > img {
+    width: 5%;
+    height: auto;
+}
+
+.login_with_facebook > a {
+    color: #385185;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3%;
+}

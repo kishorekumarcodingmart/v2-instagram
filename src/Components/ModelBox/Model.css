@@ -1,0 +1,61 @@
+.modalBackground {
+    background-color: rgba(200, 200, 200);
+    position: fixed;
+  }
+  
+  .modalContainer {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+  }
+  
+  .modalContainer .body {
+    flex: 50%;
+    font-size: 1rem;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+  }
+  
+   button {
+    background-color: #0095f6;
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  #cancelBtn {
+    background-color: white;
+    color: black;
+  }
+
+  .otpInput {
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    font-size: 80%;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .modalContainer {
+      width: 80%;
+    }
+    
+    button {
+      width: 90%;
+    }
+  }

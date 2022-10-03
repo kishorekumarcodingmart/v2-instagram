@@ -1,0 +1,57 @@
+.wrapper-section {
+    background-color: #fafafa;
+}
+
+.w-box {
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    width: 27%;
+}
+
+.w-box > form > input {
+    /* padding: 1%; */
+    width: 80%;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    font-size: 80%;
+}
+
+.w-box > form > input[type="Submit"] {
+    background-color: #0095f6;
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 4px;
+}
+
+.Forgotten_Password {
+    margin: 3% 0;
+    text-align: center;
+}
+
+.Forgotten_Password > a {
+    text-decoration: none;
+    color: #385185;
+    font-size: 80%;
+}
+
+@media screen and (max-width: 800px) {
+    .w-box {
+        width: 80%;
+        border: none;
+        background-color: inherit;
+    }
+
+    .w-box > form {
+        width: 100%;
+    }
+
+    .w-box > form > input {
+        margin: 2%;
+        width: 100%;
+    }
+
+    
+
+
+}

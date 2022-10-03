@@ -1,0 +1,20 @@
+footer {
+    background-color: #fafafa;
+}
+
+.links {
+    text-decoration: none;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+
+.links:hover {
+    color: inherit;
+}
+
+.selectBtn {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
