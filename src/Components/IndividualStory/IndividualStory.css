@@ -1,3 +1,7 @@
+.individual-story:hover {
+    cursor: pointer;
+}
+
 .individual-story:first-child{
     margin: 0 0;
 }
@@ -48,6 +52,7 @@
     height: 3.3rem;
     border-radius: 50%;
 }
+
 
 @keyframes stroke-draw {
     from {
