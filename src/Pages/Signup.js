@@ -47,7 +47,7 @@ function Signup() {
   const handleForm = async (e) => {
     e.preventDefault()
     if (valdation(formData)){
-      await sendForm("user/generateOtp",data)
+      await sendForm("user/generateOtp",formData)
       setModalOpen(true)
     }
     else{alert("Username or Password Wrong")}

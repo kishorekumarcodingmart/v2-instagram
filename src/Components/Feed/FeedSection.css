@@ -1,0 +1,400 @@
+/* Desktop Feed */
+.main-content {
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+}
+
+.grid-system-for-desktop{
+    margin-top: 2%;
+    width: 55%;
+    /* max-width: 1000px; */
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-gap: 1.875rem;
+}
+
+.story-section-wrapper {
+    background-color: #fafafa;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+}
+
+
+.story-section-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.individual-story:first-child{
+    margin: 0 0;
+}
+
+.individual-story {
+    margin: 0.5rem 0;
+}
+
+/* Story */
+
+.circle {
+    /* margin: 2%; */
+    position: relative;
+    width: 4.5rem;
+    height: 4.5rem;
+    top: -0.4rem;
+}
+
+.UsernameStoryMobileinside {
+    margin-top: 0.2rem;
+    position: relative;
+    top: -0.6rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    white-space: nowrap; 
+    width: 3.5rem; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.MobileRotate {
+    fill: none;
+    stroke: #8a3ab9;
+    stroke-linecap: round;
+    stroke-width: 3;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    animation: stroke-draw 6s ease-out infinite alternate;
+    enable-background:new -580 439 577.9 194;
+}
+
+.storyPhotoMobile {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+}
+
+@keyframes stroke-draw {
+    from {
+        stroke: #8a3ab9;
+        stroke-dasharray: 1;
+    }
+
+    to {
+        stroke: #cd486b;
+        transform: rotate(180deg);
+        stroke-dasharray: 8;
+    }
+}
+
+/* Story End */
+
+.post-setion-wrapper {
+    width: 100%;
+    height: fit-content;
+}
+
+.suggestion-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.username-name-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.suggestion-section-photo {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-section-photo > img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.individual-post {
+    border: 1px solid rgb(220,220,220);
+    border-radius: 8px;
+    margin: 3% 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 0;
+}
+
+.photo-username {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3%;
+}
+
+.photo-username > img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.photo-username > div {
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.more-option {
+    margin-right: 3%;
+}
+
+.post-img {
+    border-top: 1px solid rgb(220,220,220);
+    width: 100%;
+}
+
+.post-img > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+}
+
+.username-name > p {
+    color: gray;
+    font-size: 0.7rem;
+}
+
+.follow {
+    font-size: 0.8rem;
+    color: #129cf7;
+    font-weight: bolder;
+}
+
+.follow:hover {
+    cursor: pointer;
+}
+
+.suggestion-title {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestion-title > h5 {
+    color: gray;
+    font-size: 0.9rem;
+
+}
+
+.suggestion-title > p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.suggestion-section-photo-suggestion {
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.suggestion-section-photo-suggestion > img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.footer-section-wrapper {
+    margin-top: 10%;
+}
+
+.f-link {
+    padding: 0 1%;
+    color: gray;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+.f-link:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 5%;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+
+.like-comment-share-save {
+    padding: 2% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.like-comment-share {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.save {
+    margin-right: 3%;
+}
+
+
+.other-likes {
+    width: 100%;
+    padding-left: 3%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 1% 0;
+}
+
+.other-description {
+    width: 100%;
+    padding-left: 3%;
+    font-size: 0.8rem;
+    margin: 1% 0;
+}
+
+.other-description > span {
+    padding-right: 1%;
+    font-weight: bold;
+}
+
+.other-viwes, .other-time {
+    width: 100%;
+    padding-left: 3%;
+    color: gray;
+    font-size: 0.8rem;
+    margin: 1% 0;
+}
+
+.icon-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.comment-section {
+    border-top: 1px solid rgb(220,220,220);
+    padding: 1% 3%;
+    width: 100%;
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-input {
+    border: none;
+    padding-left: 1%;
+    background-color: inherit;
+}
+
+.comment-input-button {
+    border: none;
+    background-color: inherit;
+    color:  #129cf7;
+    font-weight: bold;
+}
+
+/* End Desktop Feed */
+
+/* Mobile Feed */
+
+
+@media only screen and (max-width: 600px) {
+    .right-col {
+        display: none;
+    }
+
+    .main-content {
+        background-color: #fafafa;
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        margin-bottom: 10%;
+    }
+    
+    .grid-system-for-desktop {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .story-section-wrapper {
+        overflow: hidden;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: fit-content;
+        width: 100%;
+        position: relative;
+        background-color: inherit;
+        border: none;
+    }
+
+    .individual-post {
+        border: 1px solid rgb(220,220,220);
+        border-radius: 0%;
+        margin: 3% 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+
+/* End Mobile Feed */
+
