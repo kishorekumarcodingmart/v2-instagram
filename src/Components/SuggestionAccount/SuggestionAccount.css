@@ -1,0 +1,36 @@
+.profile-details {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.username-name-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.suggestion-section-photo {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-section-photo > img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+
+.follow {
+    font-size: 0.8rem;
+    color: #129cf7;
+    font-weight: bolder;
+}
+
+.follow:hover {
+    cursor: pointer;
+}

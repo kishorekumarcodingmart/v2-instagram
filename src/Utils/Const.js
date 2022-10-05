@@ -14,3 +14,37 @@ export const footerLinkList = {
     "Contact uploading and non-users" : "https://www.facebook.com/help/instagram/261704639352628",
   }
   
+export const feedFooeterLinkList = [
+  {
+    linkName : "About",
+    link : "/",
+  },
+  {
+    linkName : "Help",
+    link : "/",
+  },
+  {
+    linkName : "Press",
+    link : "/",
+  },
+  {
+    linkName : "API",
+    link : "/",
+  },
+  {
+    linkName : "Jobs",
+    link : "/",
+  },
+  {
+    linkName : "Privacy",
+    link : "/",
+  },
+  {
+    linkName : "Terms",
+    link : "/",
+  },
+  {
+    linkName : "Locations",
+    link : "/",
+  }
+]

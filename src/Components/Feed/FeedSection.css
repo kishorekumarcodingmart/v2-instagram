@@ -36,71 +36,7 @@
     display: none;
 }
 
-.individual-story:first-child{
-    margin: 0 0;
-}
 
-.individual-story {
-    margin: 0.5rem 0;
-}
-
-/* Story */
-
-.circle {
-    /* margin: 2%; */
-    position: relative;
-    width: 4.5rem;
-    height: 4.5rem;
-    top: -0.4rem;
-}
-
-.UsernameStoryMobileinside {
-    margin-top: 0.2rem;
-    position: relative;
-    top: -0.6rem;
-    left: 0.5rem;
-    font-size: 0.7rem;
-    white-space: nowrap; 
-    width: 3.5rem; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-
-.MobileRotate {
-    fill: none;
-    stroke: #8a3ab9;
-    stroke-linecap: round;
-    stroke-width: 3;
-    stroke-dasharray: 1;
-    stroke-dashoffset: 0;
-    animation: stroke-draw 6s ease-out infinite alternate;
-    enable-background:new -580 439 577.9 194;
-}
-
-.storyPhotoMobile {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 3.3rem;
-    height: 3.3rem;
-    border-radius: 50%;
-}
-
-@keyframes stroke-draw {
-    from {
-        stroke: #8a3ab9;
-        stroke-dasharray: 1;
-    }
-
-    to {
-        stroke: #cd486b;
-        transform: rotate(180deg);
-        stroke-dasharray: 8;
-    }
-}
-
-/* Story End */
 
 .post-setion-wrapper {
     width: 100%;
@@ -139,68 +75,6 @@
     border-radius: 50%;
 }
 
-.individual-post {
-    border: 1px solid rgb(220,220,220);
-    border-radius: 8px;
-    margin: 3% 0;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.post-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1% 0;
-}
-
-.photo-username {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 3%;
-}
-
-.photo-username > img{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-}
-
-.photo-username > div {
-    margin-left: 5%;
-    font-weight: bold;
-    font-size: 0.75rem;
-}
-
-.more-option {
-    margin-right: 3%;
-}
-
-.post-img {
-    border-top: 1px solid rgb(220,220,220);
-    width: 100%;
-}
-
-.post-img > img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.follow {
-    display: flex;
-    align-items: center;
-}
-
-.username-name > p {
-    color: gray;
-    font-size: 0.7rem;
-}
 
 .follow {
     font-size: 0.8rem;
@@ -349,7 +223,6 @@
 
 /* Mobile Feed */
 
-
 @media only screen and (max-width: 600px) {
     .right-col {
         display: none;
@@ -383,16 +256,6 @@
         border: none;
     }
 
-    .individual-post {
-        border: 1px solid rgb(220,220,220);
-        border-radius: 0%;
-        margin: 3% 0;
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
   }
 
 
