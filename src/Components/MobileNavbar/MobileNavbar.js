@@ -1,5 +1,7 @@
 import {InstagramLogo, MessageOff, NewPost} from '../../Utils/NavbarButton'
 import { Link } from 'react-router-dom'
+import Input from '../Input/Input'
+import './MobileNavbar.css'
 
 export const MobileFeed = () => {
     return(
@@ -18,7 +20,9 @@ export const MobileFeed = () => {
 export const MobileExplore = () => {
     return(
         <>
-            <h1>MobileExplore</h1>
+            <section className='w-100 flex justify-content-center align-items-center'>
+                <Input type="text" name="Search" placeholder="Search" className="exploreSearch"/>
+            </section>
         </>
     )
 }

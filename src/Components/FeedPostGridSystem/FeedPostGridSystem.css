@@ -1,0 +1,54 @@
+.postList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(6.25rem, 18.313rem));
+    justify-content: center;
+    grid-gap: 1.75rem;
+}
+
+.individualPostLink {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+
+.post-image {
+    margin: 0;
+}
+
+.post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.post-overlay {
+    background: rgba(0,0,0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.individualPostLink:hover .post-overlay{
+    display: flex;
+}
+
+.post-like, .post-comments {
+    /* width: 80px; */
+    margin: 1%;
+    /* font-weight: bold; */
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+.postList {
+    grid-gap: 0.2rem;
+}
+}

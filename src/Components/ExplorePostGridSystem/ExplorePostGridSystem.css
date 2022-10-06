@@ -1,0 +1,80 @@
+.container1, .container2 {
+    width: 70%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 0px;
+    grid-auto-flow: row;
+    
+}
+
+.container1>div, .container2>div{
+    margin: 1%;
+}
+
+
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.Reels {
+    grid-area: Reels;
+    object-fit: cover;
+}
+
+.Post-1 {
+    grid-area: Post-1;
+    object-fit: cover;
+
+}
+
+.Post-2 {
+    grid-area: Post-2;
+    object-fit: cover;
+
+}
+
+.Post-3 {
+    grid-area: Post-3;
+    object-fit: cover;
+
+}
+
+.Post-4 {
+    grid-area: Post-4;
+    object-fit: cover;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container1, .container2 {
+        width: 100%;
+    }
+
+    .container1>div, .container2>div{
+        margin: 1%;
+    }
+}
+
+
+/*  */
+.container1 {
+    grid-template-areas:
+        "Reels Post-1 Post-2"
+        "Reels Post-3 Post-4";
+}
+
+.container2 {
+    grid-template-areas:
+        "Post-1 Post-2 Reels"
+        "Post-3 Post-4 Reels";
+}
+
+video{
+    min-width: 100%;
+  min-height: 100%;
+}
+
