@@ -68,6 +68,10 @@ export const UpArrowIcon = () => {
     return (<svg aria-label="Chevron icon to see all follow requests" className="_ab6-" color="#8e8e8e" fill="#8e8e8e" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>)
 }
 
+export const DownArrowIcon = () => {
+    return (<svg aria-label="Down Chevron Icon" className="_ab6-" color="#262626" fill="#262626" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path></svg>)
+}
+
 export const ProfileIcon = () => {
     return(<svg aria-label="Profile" className="_ab6-" color="#262626" fill="#262626" height="16" role="img" viewBox="0 0 24 24" width="16"><circle cx="12.004" cy="12.004" fill="none" r="10.5" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2"></circle><path d="M18.793 20.014a6.08 6.08 0 0 0-1.778-2.447 3.991 3.991 0 0 0-2.386-.791H9.38a3.994 3.994 0 0 0-2.386.791 6.09 6.09 0 0 0-1.779 2.447" fill="none" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2"></path><circle cx="12.006" cy="9.718" fill="none" r="4.109" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2"></circle></svg>)
 }
@@ -86,4 +90,8 @@ export const ReportAProblem = () => {
 
 export const SwitchAccount = () => {
     return(<svg aria-label="Switch accounts" className="_ab6-" color="#262626" fill="#262626" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M8 8.363a1 1 0 0 0-1-1H4.31a8.977 8.977 0 0 1 14.054-1.727 1 1 0 1 0 1.414-1.414A11.003 11.003 0 0 0 3 5.672V3.363a1 1 0 1 0-2 0v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1Zm14 6.274h-5a1 1 0 0 0 0 2h2.69a8.977 8.977 0 0 1-14.054 1.727 1 1 0 0 0-1.414 1.414A11.004 11.004 0 0 0 21 18.33v2.307a1 1 0 0 0 2 0v-5a1 1 0 0 0-1-1Z"></path></svg>)
+}
+
+export const DiscoverPeople = () => {
+    return (<svg aria-label="Discover people" className="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 48 48" width="24"><path d="M32 25.5c5.2 0 9.5-4.3 9.5-9.5S37.2 6.5 32 6.5s-9.5 4.3-9.5 9.5 4.3 9.5 9.5 9.5zm0-16c3.6 0 6.5 2.9 6.5 6.5s-2.9 6.5-6.5 6.5-6.5-2.9-6.5-6.5 2.9-6.5 6.5-6.5zm5.5 19h-11c-5.5 0-10 4.5-10 10V40c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5v-1.5c0-3.9 3.1-7 7-7h11c3.9 0 7 3.1 7 7V40c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5v-1.5c0-5.5-4.5-10-10-10zm-20-4.5c0-.8-.7-1.5-1.5-1.5h-5.5V17c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5v5.5H2c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h5.5V31c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5v-5.5H16c.8 0 1.5-.7 1.5-1.5z"></path></svg>)
 }

@@ -1,4 +1,4 @@
-import {InstagramLogo, MessageOff, NewPost} from '../../Utils/NavbarButton'
+import {InstagramLogo, MessageOff, Setting, DiscoverPeople, DownArrowIcon} from '../../Utils/NavbarButton'
 import { Link } from 'react-router-dom'
 import Input from '../Input/Input'
 import './MobileNavbar.css'
@@ -31,6 +31,18 @@ export const MobileActivity = () => {
     return (
         <>
             <p className='text-center w-100 fw-bold m-1'>Activity</p>
+        </>
+    )
+}
+
+export const MobileAccount = () => {
+    return (
+        <>
+            <div className='flex align-items-center justify-content-between w-100'>
+                <div className='ml-2'><Setting /></div>
+                <div className='flex'><h3 className='mr-1'>mrkishorekumar</h3> <div className='downArrow'><DownArrowIcon /></div></div>
+                <div className='mr-2'><DiscoverPeople /></div>
+            </div>
         </>
     )
 }

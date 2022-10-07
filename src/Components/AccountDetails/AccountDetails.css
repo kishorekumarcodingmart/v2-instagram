@@ -1,0 +1,51 @@
+.AccountDetailsWrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.AccountOtherDetails {
+    margin-left: 15%;
+}
+
+
+.AccountProfilePhoto > img {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.EditProfileBtn {
+    background-color: inherit;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.EditProfileBtn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .AccountDetailsWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .AccountOtherDetails {
+        /* display: none; */
+        margin-left: 1%;
+    }
+
+    .AccountLike, .NameCap, .SettingIcon {
+        display: none;
+    }
+
+    .AccountProfilePhoto > img {
+        width: 4rem;
+    }
+    .AccountOtherDetails > div {
+        flex-direction: column;
+        margin: 2%;
+    }
+}
