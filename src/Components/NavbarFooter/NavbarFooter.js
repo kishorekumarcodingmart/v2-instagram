@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import { Link } from 'react-router-dom'
-import { HomeOn, HomeOf, SearchOn, SearchOff, MessageOn, MessageOff, NewPost, ActivityFeed, FindPeopleOn, FindPeopleOff } from '../../Utils/NavbarButton'
+import { SwitchAccount, ReportAProblem, Setting, Saved, ProfileIcon, HomeOn, HomeOf, SearchOn, SearchOff, MessageOn, MessageOff, NewPost, ActivityFeedOff, ActivityFeedOn, FindPeopleOn, FindPeopleOff } from '../../Utils/NavbarButton'
 import NavarDropdown from '../NavbarDropdown/NavbarDropdown'
 import './NavbarFooter.css'
 
@@ -41,8 +41,30 @@ function NavbarFooter({desktop, children}) {
                         <Link className="icons Find-people-mobile" to='/explore'>
                             {(window.location.pathname==='/explore')?<FindPeopleOn />:<FindPeopleOff />}   
                         </Link>
-                        <Link className="icons" to='/'><ActivityFeed /></Link>
-                        <Link className="icons" to='/account'><div><img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/></div></Link>
+                        <Link className="icons" to='/activity'>
+                             {(window.location.pathname==='/activity')?<ActivityFeedOn />:<ActivityFeedOff />}   
+                        </Link>
+                        <Link className="icons " to='/account'>
+
+                        {(desktop && windowWidth>600)?(
+                            <div className='tooltip'>
+                                <img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/>
+                                <div className="tooltiptext flex flex-col">
+                                    <div className='flex m-2 gap-2'><ProfileIcon/> <p>Profile</p></div>
+                                    <div className='flex m-2 gap-2'><Saved/> <p>Saved</p></div>
+                                    <div className='flex m-2 gap-2'><Setting/> <p>Setting</p></div>
+                                    <div className='flex m-2 gap-2'><ReportAProblem/> <p>Report a Problem</p></div>
+                                    <div className='flex m-2 gap-2'><SwitchAccount/> <p>Switch Account</p></div>
+                                    <hr className='line' />
+                                    <div className='flex m-2 gap-2'>Logout</div>
+                                </div>
+                            </div>):
+                            (<div>
+                                <img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/>
+                            </div>)}
+                            
+                        </Link>
+                            
                     </div>
                 </div>
             </section>

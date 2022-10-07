@@ -1,11 +1,11 @@
 /* Navbar Desktop */
-.navbar-wrapper{
+.navbar-wrapper {
     z-index: 2;
     position: sticky;
     top: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(220,220,220);
+    border-bottom: 1px solid rgb(220, 220, 220);
     display: flex;
     height: fit-content;
     justify-content: center;
@@ -40,7 +40,7 @@
     padding: 0;
 }
 
-.search-box > input {
+.search-box>input {
     border: none;
     border-radius: 5px;
     display: block;
@@ -77,7 +77,7 @@
         top: 0;
         width: 100%;
         background-color: rgb(255, 255, 255);
-        border-bottom: 1px solid rgb(220,220,220);
+        border-bottom: 1px solid rgb(220, 220, 220);
         display: flex;
         height: fit-content;
         justify-content: center;
@@ -108,7 +108,8 @@
         align-items: center;
     }
 
-    .camera-icon-mobile, .chat-icon-mobile {
+    .camera-icon-mobile,
+    .chat-icon-mobile {
         display: block;
     }
 
@@ -120,7 +121,10 @@
         margin-right: 4%;
     }
 
-    #dropDownIcon, #dropdown, #dropbtn, #dropdown-content {
+    #dropDownIcon,
+    #dropdown,
+    #dropbtn,
+    #dropdown-content {
         display: none;
     }
 
@@ -130,7 +134,7 @@
 
     .menu-isons {
         background-color: rgb(255, 255, 255);
-        border-top: 1px solid rgb(220,220,220);
+        border-top: 1px solid rgb(220, 220, 220);
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -142,7 +146,8 @@
         gap: 1rem;
     }
 
-    .Messenger-mobile, .Find-people-mobile {
+    .Messenger-mobile,
+    .Find-people-mobile {
         display: none;
     }
 
@@ -156,3 +161,32 @@
 }
 
 /* Navbar Moblie */
+
+
+/* ToolTip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 10rem;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    font-size: 0.9rem;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* ToolTip */

@@ -145,6 +145,10 @@
     margin-bottom: 16px;
 }
 
+.mr-1 {
+    margin-right: 8px;
+}
+
 .mr-2 {
     margin-right: 16px;
 }
@@ -193,3 +197,16 @@
     color: #8e8e8e;
 }
 /* End Text */
+
+/* Line */
+.line {
+    background-color: rgb(220,220,220);
+    height: 1px;
+    border: none;
+    width: 95%;
+    margin: 2%;
+}
+
+
+
+/* End Line */

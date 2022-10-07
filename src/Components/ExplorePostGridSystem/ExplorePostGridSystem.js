@@ -8,7 +8,7 @@ function ExplorePostGridSystem() {
        <section>
             <div className="container1">
                     <div className="Reels">
-                        <video className='grid-img' controls autoplay muted loop>
+                        <video className='grid-img' controls autoPlay muted loop>
                         <source src={Reels} type="video/mp4" />
                         Your browser does not support the video tag.
                         </video>

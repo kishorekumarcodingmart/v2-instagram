@@ -1,0 +1,36 @@
+.ActivityContentWrapper {
+    width: 45%;
+    margin: 1% auto;
+}
+
+.ActivityImg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.detailsA > h4{
+    font-size: 0.9rem;
+}
+
+.detailsA > p {
+    color: gray;
+}
+
+.arrowUp {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 800px) {
+    .ActivityContentWrapper {
+        width: 90%;
+        margin: 1% auto;
+    }
+    .FollowReq {
+        margin: 0 2%;
+    }
+    .timeLine {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,26 @@
+.followBtn {
+    background-color: #0095f6;
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 4px;
+}
+
+.followBtn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .detailsA {
+        font-size: 0.7rem;
+    }
+
+    .detailsA > h4 {
+        font-size: 0.8rem;
+    }
+
+    .followBtn {
+        font-size: 0.7rem;
+    }
+
+}

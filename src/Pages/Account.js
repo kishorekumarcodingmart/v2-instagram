@@ -5,7 +5,8 @@ import NavbarFooter from '../Components/NavbarFooter/NavbarFooter'
 function Account() {
   return (
     <>
-        <NavbarFooter desktop={true}/>
+        <NavbarFooter desktop={true}>
+        </NavbarFooter>
         Account
     </>
   )
