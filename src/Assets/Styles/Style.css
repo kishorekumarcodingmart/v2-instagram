@@ -219,12 +219,12 @@
     margin: 2%;
 }
 
-.line-auto {
+.line-100 {
     background-color: rgb(220,220,220);
     height: 1px;
     border: none;
     width: inherit;
-    margin: 2%;
+    margin: 2% 0;
 }
 
 /* End Line */
