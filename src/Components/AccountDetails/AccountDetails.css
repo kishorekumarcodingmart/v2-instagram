@@ -1,10 +1,19 @@
-.AccountDetailsWrapper {
+.AccountDetailsWrapper, .AccountIndividualStory {
     width: 60%;
     margin: 0 auto;
 }
 
+.AccountIndividualStoryWrapper {
+    margin: 5% 0;
+}
+
+
 .AccountOtherDetails {
     margin-left: 15%;
+}
+
+.MobileAccountNameDes, .MobileLikeShareComment, .MoblieAccountIndividualStory {
+    display: none;
 }
 
 
@@ -37,9 +46,10 @@
         margin-left: 1%;
     }
 
-    .AccountLike, .NameCap, .SettingIcon {
+    .AccountLike, .NameCap, .SettingIcon, .AccountIndividualStory {
         display: none;
     }
+
 
     .AccountProfilePhoto > img {
         width: 4rem;
@@ -48,4 +58,20 @@
         flex-direction: column;
         margin: 2%;
     }
+
+    .EditProfileBtn {
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .MobileAccountNameDes, .MoblieAccountIndividualStory {
+        display: block;
+        width: auto;  
+        margin: 0 7%;
+    }
+
+    .MobileLikeShareComment {
+        display: block;
+    }
+
 }

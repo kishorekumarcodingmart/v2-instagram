@@ -161,6 +161,10 @@
     margin-left: 16px;
 }
 
+.ml-3 {
+    margin-left: 32px;
+}
+
 /* End Margin */
 
 
@@ -211,6 +215,12 @@
     margin: 2%;
 }
 
-
+.line-auto {
+    background-color: rgb(220,220,220);
+    height: 1px;
+    border: none;
+    width: inherit;
+    margin: 2%;
+}
 
 /* End Line */
