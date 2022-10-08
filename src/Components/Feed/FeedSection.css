@@ -1,6 +1,6 @@
 /* Desktop Feed */
 .main-content {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -229,7 +229,7 @@
     }
 
     .main-content {
-        background-color: #fafafa;
+        /* background-color: #fafafa; */
         width: 100%;
         height: auto;
         display: flex;

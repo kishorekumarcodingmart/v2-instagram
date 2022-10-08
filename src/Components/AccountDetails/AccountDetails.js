@@ -40,7 +40,7 @@ function AccountDetails() {
                 <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="story" />
             </div>
         </div>
-        <hr className='line-100' />
+        <hr className='lineMD' />
         <section className='MobileLikeShareComment'>
             <div className='flex justify-content-between align-items-center'>
                 <div className='flex p-2 align-items-center flex-col ml-1'><div className='fw-bold mr-1'>12</div>posts</div>

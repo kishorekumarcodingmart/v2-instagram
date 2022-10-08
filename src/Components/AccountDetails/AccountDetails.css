@@ -3,8 +3,16 @@
     margin: 0 auto;
 }
 
+.lineMD {
+    background-color: rgb(220,220,220);
+    height: 1px;
+    border: none;
+    width: 60%;
+    margin: 0 auto;
+}
+
 .AccountIndividualStoryWrapper {
-    margin: 5% 0;
+    margin: 2% 0;
 }
 
 
@@ -38,7 +46,7 @@
     margin: 0 5%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .AccountDetailsWrapper {
         width: 100%;
         margin: 0;
@@ -72,11 +80,19 @@
     .MobileAccountNameDes, .MoblieAccountIndividualStory {
         display: block;
         width: auto;  
-        margin: 0 7%;
+        margin: 2% 7%;
     }
 
     .MobileLikeShareComment {
         display: block;
+    }
+
+    .lineMD {
+        width: 100%;
+    }
+
+    .AccountIndividualStoryWrapper {
+        margin: 2% 0;
     }
 
 }
