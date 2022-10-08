@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { SwitchAccount, ReportAProblem, Setting, Saved, ProfileIcon, HomeOn, HomeOf, SearchOn, SearchOff, MessageOn, MessageOff, NewPost, ActivityFeedOff, ActivityFeedOn, FindPeopleOn, FindPeopleOff } from '../../Utils/NavbarButton'
 import NavarDropdown from '../NavbarDropdown/NavbarDropdown'
 import './NavbarFooter.css'
+import UploadPost from '../UploadPost/UploadPost'
 
 function NavbarFooter({desktop, children}) {
 
@@ -10,6 +11,8 @@ function NavbarFooter({desktop, children}) {
     window.addEventListener("resize", () => {
         setWindowWidth(window.innerWidth);
     })
+
+    const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
@@ -37,7 +40,9 @@ function NavbarFooter({desktop, children}) {
                             {(window.location.pathname==='/message')?<MessageOn />:<MessageOff />}
                             
                         </Link>
-                        <Link className="icons" to='/'><NewPost /></Link>
+                        {/* New Post */}
+                        <div onClick={() => { setModalOpen(true); }} className="hoverPost"><NewPost /></div>
+                        {/* End New Post */}
                         <Link className="icons Find-people-mobile" to='/explore'>
                             {(window.location.pathname==='/explore')?<FindPeopleOn />:<FindPeopleOff />}   
                         </Link>
@@ -69,6 +74,7 @@ function NavbarFooter({desktop, children}) {
                 </div>
             </section>
         </nav>
+        {modalOpen && <UploadPost setOpenModal={setModalOpen} />}
     </>
   )
 }

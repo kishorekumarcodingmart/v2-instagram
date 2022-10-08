@@ -23,6 +23,9 @@
     align-items: center;
 }
 
+.hoverPost:hover {
+    cursor: pointer;
+}
 
 
 /* Drop Down End */
