@@ -1,0 +1,94 @@
+.InboxWrapperDesktop {
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.UsernameChatDesktop {
+    height: 10%;
+    border-bottom: 1px solid #dbdbdb;
+
+}
+.chatbox {
+    width: 40%;
+    border-right: 1px solid #dbdbdb;
+
+}
+.chatboxInv {
+    width: 60%;
+    height: 100%;
+}
+
+.ChatMobileDesktop {
+    margin: 0 15%;
+    border: 1px solid #dbdbdb;
+    height: 70%;
+}
+
+.downArrow {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.chatDp {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.individualChat {
+    padding: 1%;
+    margin: 2% ;
+}
+
+.individualChat:hover {
+    cursor: pointer;
+    background-color: #ECECEC;
+}
+
+.individualChatWrapper {
+    height: 90%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+@media screen and (max-width: 800px) {
+    .chatboxInv, .UsernameChatDesktop {
+        display: none;
+    }
+
+    .InboxWrapperDesktop {
+        width: 100%;
+        height: auto;
+    }
+
+    .individualChatWrapper {
+        width: 100%;
+    }
+    .chatbox {
+        width: 100%;
+        border-right: none;
+    }
+
+    .ChatMobileDesktop {
+        margin: 0 ;
+        border: none;
+        height: 70%;
+    }
+
+    .UsernameChatDesktop {
+        height: fit-content;
+        border-bottom: none;
+    
+    }
+
+    .individualChatWrapper {
+        height: fit-content;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .individualChatWrapper {
+        margin-bottom: 9%;
+    }
+}

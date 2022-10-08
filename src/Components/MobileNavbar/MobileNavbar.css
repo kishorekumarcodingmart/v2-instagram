@@ -12,3 +12,8 @@
     display: inline-block;
     transform: rotate(180deg);
 }
+
+.rightArrow {
+    display: inline-block;
+    transform: rotate(270deg);
+}
