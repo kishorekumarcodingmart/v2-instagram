@@ -57,7 +57,31 @@ const post = [
         description : "Never sacrifice three things: family, love, and or yourself.",
         commentCount : "3",
         timeStamp : "1 Day Ago"
-    }
+    },
+    {
+        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        likes : "404",
+        username : "mrkishorekumar",
+        description : "Never sacrifice three things: family, love, and or yourself.",
+        commentCount : "3",
+        timeStamp : "1 Day Ago"
+    },
+    {
+        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        likes : "404",
+        username : "mrkishorekumar",
+        description : "Never sacrifice three things: family, love, and or yourself.",
+        commentCount : "3",
+        timeStamp : "1 Day Ago"
+    },
+    {
+        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        likes : "404",
+        username : "mrkishorekumar",
+        description : "Never sacrifice three things: family, love, and or yourself.",
+        commentCount : "3",
+        timeStamp : "1 Day Ago"
+    },
 ]
 
 const suggestion = [
@@ -65,8 +89,32 @@ const suggestion = [
         profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
         name : "mrkishorekumar",
         userName : "M R Kishore Kumar",
-
-    }
+    },
+    {
+        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        name : "mrkishorekumar",
+        userName : "M R Kishore Kumar",
+    },
+    {
+        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        name : "mrkishorekumar",
+        userName : "M R Kishore Kumar",
+    },
+    {
+        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        name : "mrkishorekumar",
+        userName : "M R Kishore Kumar",
+    },
+    {
+        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        name : "mrkishorekumar",
+        userName : "M R Kishore Kumar",
+    },
+    {
+        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        name : "mrkishorekumar",
+        userName : "M R Kishore Kumar",
+    },
 ]
 
 function FeedSection() {
