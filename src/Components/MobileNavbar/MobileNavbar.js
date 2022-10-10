@@ -59,3 +59,14 @@ export const MobileInbox = () => {
         </>
     )
 }
+
+export const MobileSetting = () => {
+    return (
+        <>
+            <div className='w-100 flex align-items-center '>
+                <div className='ml-2 rightArrow'><DownArrowIcon /></div>
+                <h4 className='text-center ml-2'>Edit Profile</h4>
+            </div>
+        </>
+    )
+}

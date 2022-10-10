@@ -1,0 +1,40 @@
+.SettingWrapper {
+    /* height: 100vh; */
+    width: 100%;
+    margin-bottom: 5%;
+
+}
+
+.SettingWrapperComp {
+    border: 1px solid #dbdbdb;
+    height: fit-content;
+    width: 70%;
+}
+
+.SettingsTitle {
+    border-right: 1px solid #dbdbdb;
+    width: 30%;
+}
+
+.SettingTabs {
+    margin: 2%;
+    width: 70%;
+}
+
+
+.ProfessionalAccount {
+    border-bottom: 1px solid #dbdbdb;
+
+    width: 100%;
+    /* border-right: 1px solid #dbdbdb; */
+    color: #0095f6;
+}
+
+.AccountCenter {
+    color: #0095f6;
+
+}
+
+.metaSection > p {
+    font-size: 0.7rem;
+}

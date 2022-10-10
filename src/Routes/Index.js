@@ -7,6 +7,7 @@ import Message from '../Pages/Message'
 import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
+import Setting from '../Pages/Setting'
 
 
 
@@ -21,7 +22,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-
+            <Route path='/setting' element={<Setting />} />
         </Routes>
     </>
   )

@@ -68,6 +68,10 @@
     align-items: center;
 }
 
+.align-items-start {
+    align-items: flex-start;
+}
+
 .gap-2 {
     gap: 8px;
 }
@@ -153,6 +157,10 @@
     margin-bottom: 16px;
 }
 
+.mb-4 {
+    margin-bottom: 32px;
+}
+
 .mr-1 {
     margin-right: 8px;
 }
@@ -228,3 +236,11 @@
 }
 
 /* End Line */
+
+
+/* Extra */
+.colorBlue {
+    color: #0095f6;
+}
+
+/* Extra */
