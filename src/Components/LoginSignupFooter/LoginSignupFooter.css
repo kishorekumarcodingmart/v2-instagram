@@ -5,7 +5,7 @@ footer {
 .links {
     text-decoration: none;
     color: grey;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-size: 0.8rem;
 }
 

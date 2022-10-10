@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Inbox.css'
 import {MessageBig, NewChat, DownArrowIcon} from '../../Utils/NavbarButton'
 
@@ -91,6 +91,9 @@ const MsgData = [
 ]
 
 function Inbox() {
+
+    const [msg, setMsg] = useState({})
+
   return (
     <>
         <section className='InboxWrapperDesktop flex justify-content-center align-items-center w-100 1'>
@@ -106,7 +109,7 @@ function Inbox() {
                         {
                             MsgData.map((val,index)=>{
                                 return(
-                                    <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index}>
+                                    <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index} onClick={()=>setMsg(val)}>
                                         <div><img src={val.imgUrl} className="chatDp" alt="dp" /></div>
                                         <div>
                                             <p className='mb-2 fw-bold'>{val.userName}</p>
@@ -118,14 +121,19 @@ function Inbox() {
                         }
                     </div>
                 </div>
-                <div className='chatboxInv flex flex-col justify-content-center align-items-center 4'>
-                    <div className='NothingNewMsg flex flex-col justify-content-center align-items-center  5'>
-                        <div className='m-2'><MessageBig /></div>
-                        <div className='m-2'><h2>Your messages</h2></div>
-                        <div className='m-2'><p className='text-gray'>Send private photos and messages to a friend or group.</p></div>
-                        <div className='m-2'><button className='p-2 '>Send message</button></div>
-                    </div>
-                </div>
+                {
+                    (Object.keys(msg).length === 0)?(
+                        <div className='chatboxInv flex flex-col justify-content-center align-items-center 4'>
+                            <div className='NothingNewMsg flex flex-col justify-content-center align-items-center  5'>
+                                <div className='m-2'><MessageBig /></div>
+                                <div className='m-2'><h2>Your messages</h2></div>
+                                <div className='m-2'><p className='text-gray'>Send private photos and messages to a friend or group.</p></div>
+                                <div className='m-2'><button className='p-2 '>Send message</button></div>
+                            </div>
+                        </div>
+                    ):<div>{msg.userName}</div>
+                }
+                
             </div>
         </section>
     </>

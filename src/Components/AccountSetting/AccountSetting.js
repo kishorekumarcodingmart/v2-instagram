@@ -1,14 +1,81 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './AccountSetting.css'
 import {MetaSection} from '../../Utils/NavbarButton'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
 import EditProfile from '../AllSetting/EditProfile/EditProfile'
+import ChangePassword from '../AllSetting/ChangePassword/ChangePassword'
+import AppsAndWebsites from '../AllSetting/AppsAndWebsites/AppsAndWebsites'
+import EmailNotifications from '../AllSetting/EmailNotifications/EmailNotifications'
 
 
-const SettingOption = ["Edit Profile","Change password","Apps and websites", "Email notifications","Push notifications", "Manage contacts","Privacy and security", "Login activity", "Emails from Instagram", "Help","Digital collectibles"]
+const SettingOption = [
+    {
+        PageName : "Edit Profile",
+        path : "/accounts/edit/"
+    },
+    {
+        PageName : "Change password",
+        path : "/accounts/password/change/"
+    },
+    {
+        PageName : "Apps and websites",
+        path : "/accounts/manage_access/"
+    },
+    {
+        PageName : "Email notifications",
+        path : "/emails/settings/"
+    },
+    {
+        PageName : "Push notifications",
+        path : "/push/web/settings/"
+    },
+    {
+        PageName : "Manage contacts",
+        path : "/accounts/contact_history/"
+    },
+    {
+        PageName : "Privacy and security",
+        path : "/accounts/privacy_and_security/"
+    },
+    {
+        PageName : "Super Vision",
+        path : "/accounts/supervision/"
+    },
+    {
+        PageName : "Login activity",
+        path : "/session/login_activity/"
+    },
+    {
+        PageName :  "Emails from Instagram",
+        path : "/emails/emails_sent/"
+    },
+    {
+        PageName : "Help",
+        path : "/settings/help/"
+    }
+]
 
+const settingLayout = () => {
+    if (window.location.pathname==="/accounts/edit/"){
+        return (<EditProfile />)
+    }
+    else if(window.location.pathname==="/accounts/password/change/") {
+        return (<ChangePassword />)
+    }
+
+    else if(window.location.pathname==="/accounts/manage_access/") {
+        return (<AppsAndWebsites />)
+    }
+
+    else if(window.location.pathname==="/emails/settings/") {
+        return (<EmailNotifications />)
+    }
+}
 
 function AccountSetting() {
+    
+
   return (
     <>
         <section className='SettingWrapper flex justify-content-center align-item-center'>
@@ -18,7 +85,7 @@ function AccountSetting() {
                         SettingOption.map((val,index)=>{
                             return (
                                 <div className='' key={index}>
-                                    <div className='individualSetting w-100 p-3'>{val}</div>
+                                    <div className='individualSetting w-100 p-3'><Link className='link' to={val.path}>{val.PageName}</Link></div>
                                 </div>
                             )
                         })
@@ -31,7 +98,7 @@ function AccountSetting() {
                     </div>
                 </div>
                 <div className='SettingTabs'>
-                    <EditProfile />
+                    {settingLayout()}
                 </div>
             </div>
         </section>

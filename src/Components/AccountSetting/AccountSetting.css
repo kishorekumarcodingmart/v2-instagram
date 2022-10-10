@@ -21,6 +21,14 @@
     width: 70%;
 }
 
+@media screen and (max-width: 600px) {
+    .SettingTabs {
+        /* margin: 2%; */
+        width: 100%;
+    }
+
+}
+
 
 .ProfessionalAccount {
     border-bottom: 1px solid #dbdbdb;

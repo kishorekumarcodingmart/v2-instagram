@@ -49,15 +49,15 @@ function NavbarFooter({desktop, children}) {
                         <Link className="icons" to='/activity'>
                              {(window.location.pathname==='/activity')?<ActivityFeedOn />:<ActivityFeedOff />}   
                         </Link>
-                        <Link className="icons " to='/account'>
+                        {/* <Link className="icons " to='/account'> */}
 
                         {(desktop && windowWidth>600)?(
                             <div className='tooltip'>
                                 <img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/>
                                 <div className="tooltiptext flex flex-col">
-                                    <div className='flex m-2 gap-2'><ProfileIcon/> <p>Profile</p></div>
+                                    <Link className='link' to="/account"><div className='flex m-2 gap-2'><ProfileIcon/> <p>Profile</p></div></Link>
                                     <div className='flex m-2 gap-2'><Saved/> <p>Saved</p></div>
-                                    <div className='flex m-2 gap-2'><Setting/> <p>Setting</p></div>
+                                    <Link className='link' to="/accounts/edit/"><div className='flex m-2 gap-2'><Setting/> <p>Setting</p></div></Link>
                                     <div className='flex m-2 gap-2'><ReportAProblem/> <p>Report a Problem</p></div>
                                     <div className='flex m-2 gap-2'><SwitchAccount/> <p>Switch Account</p></div>
                                     <hr className='line' />
@@ -65,10 +65,10 @@ function NavbarFooter({desktop, children}) {
                                 </div>
                             </div>):
                             (<div>
-                                <img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/>
+                                <Link to='/account'><img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/></Link>
                             </div>)}
                             
-                        </Link>
+                        {/* </Link> */}
                             
                     </div>
                 </div>

@@ -278,3 +278,22 @@
 }
 
 /* Extra */
+
+/* Link */
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.input {
+    border: none;
+    border-radius: 5px;
+    display: block;
+    /* margin-left: 2%; */
+    padding: 3%;
+    background-color: #efefef;
+    /* width: 100%; */
+}
+
+/* End Link */

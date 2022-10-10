@@ -39,7 +39,7 @@ export const MobileAccount = () => {
     return (
         <>
             <div className='flex align-items-center justify-content-between w-100'>
-                <div className='ml-2'><Setting /></div>
+                <Link to="/accounts/edit/"><div className='ml-2'><Setting /></div></Link>
                 <div className='flex'><h3 className='mr-1'>mrkishorekumar</h3> <div className='downArrow'><DownArrowIcon /></div></div>
                 <div className='mr-2'><DiscoverPeople /></div>
             </div>

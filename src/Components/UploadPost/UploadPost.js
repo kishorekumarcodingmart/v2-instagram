@@ -15,11 +15,11 @@ function UploadPost({ setOpenModal }) {
                 <form>
                     <div className="body">
                         {/* <label>Image URL :</label> */}
-                        <Input type="url" placeholder="Image URL" className="" />
+                        <Input type="url" placeholder="Image URL" className="inputUpload" />
                     </div>
                     <div className="body">
                     {/* <label>Caption :</label> */}
-                    <Input type="text" placeholder="Caption" className="" />
+                    <Input type="text" placeholder="Caption" className="inputUpload" />
                 </div>
                 </form>
                 <div className="footer">

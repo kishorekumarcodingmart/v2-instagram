@@ -12,6 +12,8 @@ import Setting from '../Pages/Setting'
 
 
 function Index() {
+
+  const settingsArr = ['/accounts/edit/','/accounts/password/change/','/accounts/manage_access/','/emails/settings/','/push/web/settings/','/accounts/contact_history/','/accounts/privacy_and_security/','/accounts/supervision/','/session/login_activity/','/emails/emails_sent/','/settings/help/']
   return (
     <>
         <Routes>
@@ -22,7 +24,11 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-            <Route path='/setting' element={<Setting />} />
+            {
+              settingsArr.map((val,index)=>{
+                return (<Route key={index} path={val} element={<Setting />} />)
+              })
+            }
         </Routes>
     </>
   )
