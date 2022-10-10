@@ -3,15 +3,34 @@
 }
 
 .profilePicSetting {
+    margin-left: auto;
     display: block;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
 }
 
-tr {
-    margin: 2%;
+
+.submitBtn {
+    margin: 0 auto;
 }
+
+table {
+    /* font-family: arial, sans-serif; */
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  td, th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
 
 /* table,tbody, tr, td {
     border: 1px solid red;
