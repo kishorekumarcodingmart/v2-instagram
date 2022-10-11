@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Inbox.css'
 import {MessageBig, NewChat, DownArrowIcon} from '../../Utils/NavbarButton'
+import IndividualChat from '../IndividualChat/IndividualChat'
 
 const MsgData = [
     {
@@ -124,14 +125,14 @@ function Inbox() {
                 {
                     (Object.keys(msg).length === 0)?(
                         <div className='chatboxInv flex flex-col justify-content-center align-items-center 4'>
-                            <div className='NothingNewMsg flex flex-col justify-content-center align-items-center  5'>
+                            <div className='NothingNewMsg flex flex-col justify-content-center align-items-center text-center  5'>
                                 <div className='m-2'><MessageBig /></div>
                                 <div className='m-2'><h2>Your messages</h2></div>
                                 <div className='m-2'><p className='text-gray'>Send private photos and messages to a friend or group.</p></div>
                                 <div className='m-2'><button className='p-2 '>Send message</button></div>
                             </div>
                         </div>
-                    ):<div>{msg.userName}</div>
+                    ):<div className='w-100'>{<IndividualChat />}</div>
                 }
                 
             </div>

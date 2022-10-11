@@ -10,7 +10,7 @@ function NavarDropdown() {
         <div className="logo-dropdown">
             <div className="camera-icon-mobile"><NewStoryMobile /></div>
             <div className="logo">
-                <InstagramLogo />
+                <Link to="/"><InstagramLogo /></Link>
             </div>
             <div className="chat-icon-mobile"><MessageOff /></div>
             {/* <!-- Drop Down --> */}
