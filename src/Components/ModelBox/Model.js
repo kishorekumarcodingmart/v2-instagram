@@ -35,7 +35,7 @@ function Model({ data }) {
 
   return (
     <>
-    <div className="modalBackground flex justify-content-center align-items-center w-100vw vh-100">
+    <div className="modalBackground1 flex justify-content-center align-items-center w-100vw vh-100">
         <div className="modalContainer mt-2 w-50 h-auto flex flex-col text-center p-2">
             <div className="title text-center mt-2">
                 <h2>Enter your OTP</h2>
