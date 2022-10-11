@@ -36,8 +36,8 @@
 .MobileRotate {
     fill: none;
     stroke: #8a3ab9;
-    strokeLinecap: round;
-    strokeWidth: 3;
+    stroke-linecap: round;
+    stroke-width: 3;
     stroke-dasharray: 1;
     stroke-dashoffset: 0;
     animation: stroke-draw 6s ease-out infinite alternate;
