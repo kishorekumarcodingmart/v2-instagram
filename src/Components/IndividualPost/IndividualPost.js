@@ -1,5 +1,6 @@
 import React from 'react'
 import './IndividualPost.css'
+import PostSlider from '../PostSlider/PostSlider'
 
 function IndividualPost({postUrl,likes,username,description,commentCount,timeStamp}) {
   return (
@@ -12,8 +13,11 @@ function IndividualPost({postUrl,likes,username,description,commentCount,timeSta
                 </div>
                 <div className="more-option"><svg aria-label="More Options" className="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg></div>
             </div>
-            <div className="post-img">
-                <img src={postUrl} alt="post" />
+            <div className="post-img" onDoubleClick={(e)=>console.log(e)}>
+                {/* Single Post */}
+                {/* <img src={postUrl} alt="post" />   */}
+                {/* Multi Post */}
+                <PostSlider/> 
             </div>
             <div className="like-comment-share-save">
                 <div className="like-comment-share">
