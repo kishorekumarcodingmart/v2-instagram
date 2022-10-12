@@ -1,7 +1,7 @@
 import React from 'react'
 import './PostSlider.css'
-import leftArrow from "./icons/left.svg";
-import rightArrow from "./icons/right.svg";
+import leftArrow from "../../Assets/icons/left.svg";
+import rightArrow from "../../Assets/icons/right.svg";
 
 function BtnSlider({ direction, moveSlide }) {
   return (

@@ -127,7 +127,6 @@ function FeedSection() {
   }
 
   const onClickFunc = () => {
-    console.log(refState)
     refState.style.display = "flex"
   }
 

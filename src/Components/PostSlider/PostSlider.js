@@ -31,7 +31,7 @@ function PostSlider() {
 
   return (
     <>
-         <div className="container-slider">
+         <div className="container-slider w-100">
             {dataSlider.map((obj, index) => {
                 return (
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
