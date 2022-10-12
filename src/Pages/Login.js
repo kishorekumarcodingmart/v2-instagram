@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { sendForm } from '../Api/sendForm'
 import { validateEmail, validatePassword, validatePhone, validateUserName } from '../Helper/Validate'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import '../Assets/Styles/SignupLogin.css'
 import Instgarm from '../Assets/Images/instagram-title.png'
 import Input from '../Components/Input/Input';
@@ -19,6 +19,8 @@ function Login() {
 
   const [formData, setFormData] = useState({userName:"", password:"", deviceName:window.navigator.userAgent, location : "Codingmart"})
 
+  const [navigate, setNavigate] = useState(false)
+
   const handleChange = (e) => {
     let {name, value} = e.target
     setFormData({...formData, [name]: value});
@@ -26,33 +28,27 @@ function Login() {
 
   const valdation = (value) => {
     if (validateEmail(value.userName) || validatePhone(value.userName) || validateUserName(value.userName)){
-      if (validatePassword(value.password)){
-        return true
-      }
-      else{
-        return false
-      }
-    }
-    else {
-      return false
-    }
+      if (validatePassword(value.password)){ return true }
+      else{ return false } }
+    else {return false}
     
   }
 
-  // const sendForm = () => {
-  //   fetch('https://c24e-115-246-250-59.in.ngrok.io/user/login', {
-  //     method : "POST",
-  //     body : JSON.stringify(formData),
-  //     headers: { 'Content-Type': 'application/json' },
-  //   })
-  //   .then(res => res.json())
-  //   .then(res => console.log(res))
-  // }
-
   const handleForm = (e) => {
     e.preventDefault()
-    valdation(formData)?sendForm("user/login",formData):alert("Username or Password Wrong")
-    
+    if(!valdation(formData)){
+      alert('Wrong Data');
+      return
+    }
+    sendForm("user/login",formData)
+    .then(res => {
+      console.log(res);
+      sessionStorage.setItem('tokenKey', res.accessToken);
+      setNavigate(true)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
   
 
@@ -85,6 +81,7 @@ function Login() {
       </section>
 
       <LoginSignupFooter />
+      {navigate && ( <Navigate to="/" replace={true} /> )}
     </>
   )
 }

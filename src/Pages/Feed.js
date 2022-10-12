@@ -6,10 +6,12 @@ import {MobileFeed} from '../Components/MobileNavbar/MobileNavbar'
 function Feed() {
   return (
     <>
-    <NavbarFooter desktop={true}>
-      <MobileFeed/>
-    </NavbarFooter>
-    <FeedSection />
+
+      <NavbarFooter desktop={true}>
+        <MobileFeed/>
+      </NavbarFooter>
+      <FeedSection />
+
     </>
   )
 }

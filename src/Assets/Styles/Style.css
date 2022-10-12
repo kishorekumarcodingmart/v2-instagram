@@ -233,6 +233,10 @@
     padding: 0 8px;
 }
 
+.pr-3 {
+    padding-right: 16px;
+}
+
 .pt-1 {
     padding-top: 4px;
 }

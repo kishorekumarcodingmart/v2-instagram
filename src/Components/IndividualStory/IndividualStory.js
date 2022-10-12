@@ -1,12 +1,12 @@
 import React from 'react'
 import './IndividualStory.css'
 
-function IndividualStory({img,username}) {
+function IndividualStory({img,username, onClickFunc}) {
 
 
   return (
     <>
-        <div className="individual-story" >
+        <div className="individual-story" onClick={onClickFunc}>
             <div className="circle">
                 <img src={img} className="storyPhotoMobile" alt="img" />
                 <svg className='MobileRotate' viewBox="0 0 100 100">

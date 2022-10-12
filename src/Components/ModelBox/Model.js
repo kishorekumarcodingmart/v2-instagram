@@ -30,7 +30,7 @@ function Model({ data }) {
   const handleForm = (e) => {
     e.preventDefault()
     data.otp = otp.otp
-    sendForm("user/signup",data)
+    sendForm("user/signup/",data)
   }
 
   return (

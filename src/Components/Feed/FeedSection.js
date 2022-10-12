@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './FeedSection.css'
 import { Link } from 'react-router-dom'
 import IndividualStory from '../IndividualStory/IndividualStory'
 import IndividualPost from '../IndividualPost/IndividualPost'
 import SuggestionAccount from '../SuggestionAccount/SuggestionAccount'
 import {feedFooeterLinkList} from '../../Utils/Const'
+import StoryModel from '../StoryModel/StoryModel'
 
 const story = [
     {
@@ -118,6 +119,18 @@ const suggestion = [
 ]
 
 function FeedSection() {
+
+    const [refState , setRefState] = useState("")
+
+  const StoryModelFunc = (data) => {
+    setRefState(data.current)
+  }
+
+  const onClickFunc = () => {
+    console.log(refState)
+    refState.style.display = "flex"
+  }
+
   return (
     <>
     <section className="main-content">
@@ -126,7 +139,7 @@ function FeedSection() {
                 <div className="story-section-wrapper">
                     {
                         story.map((val,index)=>{
-                            return (<IndividualStory key={index} img={val.profilePhoto} username={val.userName}/>)
+                            return (<IndividualStory key={index} img={val.profilePhoto} username={val.userName} onClickFunc={onClickFunc}/>)
                         })
                     }
                 </div>
@@ -177,6 +190,7 @@ function FeedSection() {
             </div>
         </div>
     </section>
+    <StoryModel StoryModelFunc={StoryModelFunc}/>
     </>
   )
 }
