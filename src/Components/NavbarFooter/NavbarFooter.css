@@ -35,10 +35,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 6rem;
 }
 
 .search-box {
-    margin-right: 10.5rem;
+    /* margin-right: 10.5rem; */
     border: none;
     padding: 0;
 }
