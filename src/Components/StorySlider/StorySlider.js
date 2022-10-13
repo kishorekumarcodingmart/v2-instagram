@@ -34,7 +34,7 @@ function StorySlider() {
                 return (
                     <div key={index} className={slideStoryIndex === index + 1 ? "slide active-anim" : "slide"} id="mobileCenter">
                         <div style={{backgroundImage : `url(${obj.storyUrl})`}} className="storyView">
-                            <div className='p-2'><ProgressBar /></div>
+                            <div className='p-2 ProgressBarMobile'><ProgressBar /></div>
                             <div className='flex align-items-center'>
                                 <img src={"https://instagram-clone-mrkishorekumar.netlify.app/img.png"}  id="storyDp" alt="dp" className='py-2' />
                                 <div className='text-white fw-bold'>mrkishorekumar</div>
@@ -48,7 +48,7 @@ function StorySlider() {
                                 </div>
                             </div>
                         </div>
-                        {/* <img src={obj.storyUrl} alt="post" /> */}
+                         {/* <img src={obj.storyUrl} alt="post" /> */}
                     </div>
                 )
             })}

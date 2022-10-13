@@ -43,4 +43,7 @@
         margin: 0;
         padding: 0;
     }
+    .ProgressBarMobile {
+        padding: 0;
+    }
 }
