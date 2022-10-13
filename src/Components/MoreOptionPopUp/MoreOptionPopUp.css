@@ -1,0 +1,38 @@
+.modelMoreOption {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;                                                                                          ;
+    left: 0;
+    top: 0;
+    background-color: rgb(87,87,87,0.5);
+}
+
+.modelMoreOptionPopup {
+    background-color: white;
+    width: 30%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.bottom-line-model {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.modelMoreOptionPopup > div:hover {
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .modelMoreOptionPopup {
+        width: 80%;
+    }
+    .modelMoreOptionPopup > div {
+        padding: 8px;
+    }
+}

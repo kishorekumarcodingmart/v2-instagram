@@ -272,6 +272,10 @@
 .text-white {
     color: white;
 }
+
+.text-red {
+    color:#ed4956;
+}
 /* End Text */
 
 /* Line */
@@ -341,6 +345,10 @@
 
 .left-0 {
     left: 0;
+}
+
+.hover:hover{
+    cursor: pointer;
 }
 
 /* End Position */

@@ -8,7 +8,7 @@ import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
-import ProgressBar from '../Components/ProgressBar/ProgressBar'
+import MoreOptionPopUp from '../Components/MoreOptionPopUp/MoreOptionPopUp'
 
 
 
@@ -25,7 +25,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-            <Route path='/test' element={<ProgressBar/>} />
+            <Route path='/test' element={<MoreOptionPopUp/>} />
             {
               settingsArr.map((val,index)=>{
                 return (<Route key={index} path={val} element={<Setting />} />)

@@ -122,6 +122,8 @@ function FeedSection() {
 
     const [refState , setRefState] = useState("")
 
+    
+
   const StoryModelFunc = (data) => {
     setRefState(data.current)
   }
@@ -145,7 +147,7 @@ function FeedSection() {
                 <div className="post-setion-wrapper">
                     {
                         post.map((val,index)=>{
-                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} />)
+                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp}  />)
                         })
                     }
                 </div>
