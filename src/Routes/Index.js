@@ -8,7 +8,7 @@ import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
-import MoreOptionPopUp from '../Components/MoreOptionPopUp/MoreOptionPopUp'
+import CommentSection from '../Components/CommentSection/CommentSection'
 
 
 
@@ -25,7 +25,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-            <Route path='/test' element={<MoreOptionPopUp/>} />
+            <Route path='/test' element={<CommentSection/>} />
             {
               settingsArr.map((val,index)=>{
                 return (<Route key={index} path={val} element={<Setting />} />)

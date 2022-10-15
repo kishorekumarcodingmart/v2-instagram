@@ -1,0 +1,87 @@
+.CommentModalPopup {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;                                                                                          ;
+    left: 0;
+    top: 0;
+    background-color: rgb(87,87,87,0.5);
+}
+
+.commentModal {
+    background-color: white;
+    height: 90%;
+    width: 80%;
+}
+
+.commentPost {
+    border-right: 1px solid #dbdbdb;
+    width: 50%;
+}
+
+.commentSection {
+    width: 50%;
+    /* justify-content: space-between; */
+}
+
+.commentPost > img {
+    width: 100%;
+    height: 100%;
+}
+
+.commentSectionNav {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.commentSectionNavDp {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.CommentList {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.CommentList::-webkit-scrollbar{
+    display: none;
+}
+
+.border-footer-comment, .inputBorderComment {
+    border-top: 1px solid #dbdbdb;
+}
+
+.border-footer-comment {
+    background-color: white;
+}
+
+.typeCommentPopup {
+    border: none;
+    outline: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .commentModal{
+        height: 80%;
+        /* border-radius: 8px; */
+    }
+    .commentPost {
+        display: none;
+    }
+
+    .commentSection {
+        width: 100%;
+    }
+
+    .typeCommentPopup {
+        width: 80%;
+    }
+
+}
