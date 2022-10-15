@@ -1,11 +1,15 @@
-import React from 'react'
+import React,  { useEffect, useRef } from 'react'
 import './CommentSection.css'
-import {MoreOption,ActivityFeedOff,Comment,SharePost, PostSave, SmileEmoji} from '../../Utils/NavbarButton'
+import {ActivityFeedOff,Comment,SharePost, PostSave, SmileEmoji} from '../../Utils/NavbarButton'
 
-function CommentSection() {
+function CommentSection({openComment}) {
+  const ComentModel = useRef()
+  useEffect(()=>{
+    openComment(ComentModel)
+  },[openComment])
   return (
     <>
-        <section className='CommentModalPopup'>
+        <section className='CommentModalPopup' ref={ComentModel} >
             <div className='commentModal flex'>
                 <div className='commentPost'>
                     <img src={"https://instagram-clone-mrkishorekumar.netlify.app/img.png"} alt="dp" />
@@ -16,7 +20,7 @@ function CommentSection() {
                             <div><img src={"https://instagram-clone-mrkishorekumar.netlify.app/img.png"} className="commentSectionNavDp mr-2" alt="dp" /></div>
                             <div className='fw-bold'>mrkishorekumar</div>
                         </div>
-                        <div className='py-2'><MoreOption /></div>
+                        <div className='py-2 hover' onClick={() => { ComentModel.current.style.display = 'none' }}>&times;</div>
                     </div>
                     <div className='CommentList w-100 flex flex-col p-2'>
                         <div className='py-2 mt-2 flex align-items-center' >

@@ -3,6 +3,7 @@ import './IndividualPost.css'
 import PostSlider from '../PostSlider/PostSlider'
 import { ActivityFeedOff, Comment, SharePost, PostSave, SmileEmoji, RedLiked, MoreOption } from '../../Utils/NavbarButton'
 import MoreOptionPopUp from '../MoreOptionPopUp/MoreOptionPopUp'
+import CommentSection from '../CommentSection/CommentSection'
 
 function IndividualPost({ postUrl, likes, username, description, commentCount, timeStamp }) {
 
@@ -10,9 +11,14 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
 
     const [optionModal, setOptionModel] = useState("")
 
+    const [commentModal, setCommentModal] = useState("")
+
     const openModel = (e) => {
-        console.log(e)
         setOptionModel(e.current)
+    }
+
+    const openComment = (e) => {
+        setCommentModal(e.current)
     }
 
 
@@ -24,7 +30,7 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
                         <img src={postUrl} alt="dp" />
                         <div>mrkishore</div>
                     </div>
-                    <div className="more-option hover" onClick={() => { console.log(optionModal);optionModal.style.display = "flex" }}><MoreOption/></div>
+                    <div className="more-option hover" onClick={() => { optionModal.style.display = "flex" }}><MoreOption/></div>
                 </div>
                 <div className="post-img" onDoubleClick={() => setLike(!like)}>
                     {/* Single Post */}
@@ -37,7 +43,7 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
                         <div onClick={() => setLike(!like)}>
                             {like ? <RedLiked /> : <ActivityFeedOff />}
                         </div>
-                        <div className='hover'><Comment /></div>
+                        <div className='hover' onClick={() => { commentModal.style.display = "flex" }}><Comment /></div>
                         <div className='hover'><SharePost /></div>
                     </div>
                     <div className="save hover">
@@ -57,6 +63,7 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
                 </div>
             </div>
             <MoreOptionPopUp openModel={openModel} />
+            <CommentSection openComment={openComment}/>
         </>
     )
 }
