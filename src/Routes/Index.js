@@ -8,8 +8,7 @@ import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
-import CommentSection from '../Components/CommentSection/CommentSection'
-
+import ShareModal from '../Components/ShareModal/ShareModal'
 
 
 function Index() {
@@ -25,7 +24,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-            <Route path='/test' element={<CommentSection/>} />
+            <Route path='/test' element={<ShareModal/>} />
             {
               settingsArr.map((val,index)=>{
                 return (<Route key={index} path={val} element={<Setting />} />)
