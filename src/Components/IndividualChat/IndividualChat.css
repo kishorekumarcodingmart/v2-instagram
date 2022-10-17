@@ -48,6 +48,7 @@
 }
 
 .friend-text-div>img {
+    border-radius: 50%;
     height: 2rem;
     align-self: flex-end;
 }

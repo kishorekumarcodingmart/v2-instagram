@@ -9,7 +9,7 @@ function SuggestionAccount({profilePhoto,name,userName}) {
                 <div className="suggestion-section-photo-suggestion"><img src={profilePhoto} alt="img" /></div>
                 <div className="username-name">
                     <h5>{userName}</h5>
-                    <p>{name}</p>
+                    <p className='lowercase'>{name}</p>
                 </div>
             </div>
             <div className="follow">Follow</div>

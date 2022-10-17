@@ -11,6 +11,10 @@
     background-color: rgb(87,87,87,0.5);
 }
 
+.commentFont {
+    font-size: 0.85rem;
+}
+
 .commentModal {
     background-color: white;
     height: 90%;
@@ -43,13 +47,14 @@
 }
 
 .CommentList {
+    padding-bottom: 5%;
     overflow: hidden;
     overflow-y: auto;
 }
 
-.CommentList::-webkit-scrollbar{
+/* .CommentList::-webkit-scrollbar{
     display: none;
-}
+} */
 
 .border-footer-comment, .inputBorderComment {
     border-top: 1px solid #dbdbdb;
@@ -69,7 +74,8 @@
 @media screen and (max-width: 800px) {
 
     .commentModal{
-        height: 80%;
+        height: 100%;
+        width: 100%;
         /* border-radius: 8px; */
     }
     .commentPost {
@@ -81,7 +87,7 @@
     }
 
     .typeCommentPopup {
-        width: 80%;
+        width: 100%;
     }
 
 }

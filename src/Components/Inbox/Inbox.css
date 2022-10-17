@@ -1,5 +1,5 @@
 .InboxWrapperDesktop {
-    height: 100vh;
+    height: 80vh;
     background-color: #fafafa;
 }
 
@@ -19,9 +19,9 @@
 }
 
 .ChatMobileDesktop {
-    margin: 0 15%;
+    margin: 0% 15%;
     border: 1px solid #dbdbdb;
-    height: 70%;
+    height: 90%;
 }
 
 .downArrow {
@@ -30,8 +30,8 @@
 }
 
 .chatDp {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
 }
 

@@ -9,76 +9,84 @@ import StoryModel from '../StoryModel/StoryModel'
 
 const story = [
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        userName : "JuliaJacobs"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        userName : "NicholasMarshall"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        userName : "JodyUnderwood"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        userName : "JackieMendez"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        userName : "PaulaBurke"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1534119768988-c496213eff76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        userName : "AlfredBaldwin"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        userName : "MarciaHart"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        userName : "ChesterSantiago"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1658932447624-152eaf36cf4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+        userName : "HerbertBrooks"
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        userName : "mrkishore Kumar"
+        profilePhoto : "https://images.unsplash.com/photo-1559582930-bb01987cf4dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=576&q=80",
+        userName : "GwendolynStokes"
     },
 ]
 
 const post = [
     {
-        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        multiPost : false,
+        profilePhoto : "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGVvcGxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        postUrl : "https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
         likes : "404",
-        username : "mrkishorekumar",
+        username : "satisfyingson",
         description : "Never sacrifice three things: family, love, and or yourself.",
         commentCount : "3",
         timeStamp : "1 Day Ago"
     },
     {
-        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        multiPost : true,
+        profilePhoto : "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        postUrl : [{url: "https://images.unsplash.com/photo-1543523195-e0613799d7ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"},{url: "https://images.unsplash.com/photo-1520315342629-6ea920342047?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"}],
         likes : "404",
-        username : "mrkishorekumar",
+        username : "raftingscroll",
         description : "Never sacrifice three things: family, love, and or yourself.",
         commentCount : "3",
         timeStamp : "1 Day Ago"
     },
     {
-        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        multiPost : false,
+        profilePhoto : "https://images.unsplash.com/photo-1485893086445-ed75865251e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        postUrl : "https://images.unsplash.com/photo-1483995564125-85915c11dcfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
         likes : "404",
-        username : "mrkishorekumar",
+        username : "magicauthentic",
         description : "Never sacrifice three things: family, love, and or yourself.",
         commentCount : "3",
         timeStamp : "1 Day Ago"
     },
     {
-        postUrl : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
+        multiPost : true,
+        profilePhoto : "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
+        postUrl : [{url: "https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"},{url: "https://images.unsplash.com/photo-1528271537-64e11fc31bba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"}],
         likes : "404",
-        username : "mrkishorekumar",
+        username : "writerfascinated",
         description : "Never sacrifice three things: family, love, and or yourself.",
         commentCount : "3",
         timeStamp : "1 Day Ago"
@@ -87,34 +95,34 @@ const post = [
 
 const suggestion = [
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "stanleysmith._12",
+        userName : "Stanley Smith",
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "sb.___12",
+        userName : "Samantha Brock",
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1541534401786-2077eed87a74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "__johnwells.111",
+        userName : "John Wells",
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1518577915332-c2a19f149a75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "Wade0",
+        userName : "Jacqueline Wade",
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1563956261547-865a33406922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "Kathryn._23",
+        userName : "Kathryn Cannon",
     },
     {
-        profilePhoto : "https://instagram-clone-mrkishorekumar.netlify.app/img.png",
-        name : "mrkishorekumar",
-        userName : "M R Kishore Kumar",
+        profilePhoto : "https://images.unsplash.com/photo-1565464027194-7957a2295fb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fHByb2ZpbGV8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        name : "Lewis2Harrington",
+        userName : "Lewis Harrington",
     },
 ]
 
@@ -147,7 +155,7 @@ function FeedSection() {
                 <div className="post-setion-wrapper">
                     {
                         post.map((val,index)=>{
-                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp}  />)
+                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} multiPost={val.multiPost} profilePhoto={val.profilePhoto} />)
                         })
                     }
                 </div>

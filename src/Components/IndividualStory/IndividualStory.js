@@ -13,7 +13,7 @@ function IndividualStory({img,username, onClickFunc}) {
                     <circle cx="50" cy="50" r="40" />
                 </svg>
             
-                <div className='UsernameStoryMobileinside'>{username}</div>
+                <div className='UsernameStoryMobileinside lowercase'>{username}</div>
             </div>
         </div>
         

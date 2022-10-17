@@ -3,14 +3,14 @@ import './IndividualChat.css'
 import { Phone, VideoCall, Info, SmileEmoji, ImageIcon,ActivityFeedOff} from '../../Utils/NavbarButton'
 
 
-function IndividualChat() {
+function IndividualChat({details}) {
   return (
     <>
         <section className='ChatAppWrapper h-100 flex flex-col 1'>
             <div className='ChatNavbarWrapper w-100 flex justify-content-between align-items-center p-2 sticky top-0'>
                 <div className='flex align-items-center gap-2'>
-                    <div><img src={"https://instagram-clone-mrkishorekumar.netlify.app/img.png"} className="IndividualChatDp" alt="dp" /></div>
-                    <div>mrkishorekumar</div>
+                    <div><img src={details.imgUrl} className="IndividualChatDp" alt="dp" /></div>
+                    <div>{details.userName}</div>
                 </div>
                 <div className='flex align-items-center gap-3'>
                     <Phone />
@@ -22,7 +22,7 @@ function IndividualChat() {
                 <div className="base-container">
                     <div className="friend-text-div">
                         <img
-                            src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="dp" />
+                            src={details.imgUrl} alt="dp" />
                         <div className="friend-text-container">
                             <div className="friend-text">Yay!</div>
                             <div className="friend-text">You should get a new laptop keyboard cover</div>
@@ -38,7 +38,7 @@ function IndividualChat() {
                     </div>
                     <div className="friend-text-div">
                         <img
-                            src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="dp" />
+                            src={details.imgUrl} alt="dp" />
                         <div className="friend-text-container">
                             <div className="friend-text">Yay!</div>
                             <div className="friend-text">You should get a new laptop keyboard cover</div>

@@ -4,14 +4,17 @@ import PostSlider from '../PostSlider/PostSlider'
 import { ActivityFeedOff, Comment, SharePost, PostSave, SmileEmoji, RedLiked, MoreOption } from '../../Utils/NavbarButton'
 import MoreOptionPopUp from '../MoreOptionPopUp/MoreOptionPopUp'
 import CommentSection from '../CommentSection/CommentSection'
+import ShareModal from '../ShareModal/ShareModal'
 
-function IndividualPost({ postUrl, likes, username, description, commentCount, timeStamp }) {
+function IndividualPost({profilePhoto, postUrl, likes, username, description, commentCount, timeStamp, multiPost }) {
 
     const [like, setLike] = useState(false)
 
     const [optionModal, setOptionModel] = useState("")
 
     const [commentModal, setCommentModal] = useState("")
+
+    const [shareModal, setShareModal] = useState("")
 
     const openModel = (e) => {
         setOptionModel(e.current)
@@ -21,22 +24,26 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
         setCommentModal(e.current)
     }
 
+    const openShare = (e) => {
+        setShareModal(e.current)
+    }
+
 
     return (
         <>
             <div className="individual-post">
                 <div className="post-header">
                     <div className="photo-username">
-                        <img src={postUrl} alt="dp" />
-                        <div>mrkishore</div>
+                        <img src={profilePhoto} alt="dp" />
+                        <div className='pl-2 lowercase'>{username}</div>
                     </div>
                     <div className="more-option hover" onClick={() => { optionModal.style.display = "flex" }}><MoreOption/></div>
                 </div>
                 <div className="post-img" onDoubleClick={() => setLike(!like)}>
                     {/* Single Post */}
-                    {/* <img src={postUrl} alt="post" />   */}
+                    {!multiPost && <img src={postUrl} alt="post" />  }
                     {/* Multi Post */}
-                    <PostSlider />
+                    {multiPost && <PostSlider postUrl={postUrl} height="400px"/>}
                 </div>
                 <div className="like-comment-share-save">
                     <div className="like-comment-share hover">
@@ -44,7 +51,7 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
                             {like ? <RedLiked /> : <ActivityFeedOff />}
                         </div>
                         <div className='hover' onClick={() => { commentModal.style.display = "flex" }}><Comment /></div>
-                        <div className='hover'><SharePost /></div>
+                        <div className='hover' onClick={() => { shareModal.style.display = "flex" }}><SharePost /></div>
                     </div>
                     <div className="save hover">
                         <div><PostSave /></div>
@@ -63,7 +70,8 @@ function IndividualPost({ postUrl, likes, username, description, commentCount, t
                 </div>
             </div>
             <MoreOptionPopUp openModel={openModel} />
-            <CommentSection openComment={openComment}/>
+            <CommentSection openComment={openComment} imgUrl={postUrl} profilePhoto={profilePhoto} username={username} likes={likes} timeStamp={timeStamp} multiPost={multiPost} setLike={setLike} like={like}/>
+            <ShareModal openShare={openShare}/>
         </>
     )
 }
