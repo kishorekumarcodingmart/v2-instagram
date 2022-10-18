@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AccountDetails.css'
 import Input from '../Input/Input'
 import {Setting} from '../../Utils/NavbarButton'
 import IndividualStory from '../IndividualStory/IndividualStory'
 import AccountNavbar from '../AccountNavbar/AccountNavbar'
 import FeedPostGridSystem from '../FeedPostGridSystem/FeedPostGridSystem'
+import FollowersModel from '../FollowersModel/FollowersModel'
 
 function AccountDetails() {
+
+  const [follwerModel, setFollwerModel] = useState("")
+
+  const openModel = (e) => {
+    setFollwerModel(e.current)
+}
+
   return (
     <>
         <section className='AccountDetailsWrapper flex align-items-center'>
@@ -22,7 +30,7 @@ function AccountDetails() {
                 </div>
                 <div className='AccountLike flex justify-content-between m-2'>
                     <div className='flex p-2 align-items-center'><div className='fw-bold mr-1'>12</div>posts</div>
-                    <div className='flex p-2 align-items-center'><div className='fw-bold mr-1'>12</div>followers</div>
+                    <div className='flex p-2 align-items-center hover' onClick={()=>{follwerModel.style.display = "flex"} }><div className='fw-bold mr-1'>12</div>followers</div>
                     <div className='flex align-items-center'><div className='fw-bold mr-1'>12</div>following</div>
                 </div>
                 <div className='NameCap'>
@@ -44,7 +52,7 @@ function AccountDetails() {
         <section className='MobileLikeShareComment'>
             <div className='flex justify-content-between align-items-center'>
                 <div className='flex p-2 align-items-center flex-col ml-1'><div className='fw-bold mr-1'>12</div>posts</div>
-                <div className='flex p-2 align-items-center flex-col'><div className='fw-bold mr-1'>12</div>followers</div>
+                <div className='flex p-2 align-items-center flex-col' ><div className='fw-bold mr-1'>12</div>followers</div>
                 <div className='flex align-items-center flex-col mr-1'><div className='fw-bold mr-1'>12</div>following</div>
             </div>
             {/* <hr className='line-auto' /> */}
@@ -57,6 +65,7 @@ function AccountDetails() {
         </div>
         <AccountNavbar />
         <FeedPostGridSystem />
+        <FollowersModel openModel={openModel}/>
     </>
   )
 }

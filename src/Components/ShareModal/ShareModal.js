@@ -40,14 +40,12 @@ export class ShareModal extends Component {
     constructor(props){
         super(props);
         this.ShareModalRef = createRef();
-        this.dunction.bind(this)
     }
 
     componentDidMount(){
         this.props.openShare(this.ShareModalRef)
     }
 
-    dunction(){}
 
   render() {
     return (
