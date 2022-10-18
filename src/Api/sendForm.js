@@ -1,8 +1,8 @@
-export const sendForm = (url,dataPass) => {
-    return fetch(`http://192.168.1.54:3000/${url}`, {
+export const sendForm = (url,dataPass, token) => {
+    return fetch(`${process.env.REACT_APP_API_KEY}${url}`, {
     method : "POST",
     body : JSON.stringify(dataPass),
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', 'x-access-token' : token },
   })
   .then(res => res.json())
 

@@ -8,7 +8,7 @@ import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
-import LoadingSpinner from '../Components/LoadingSpinner/LoadingSpinner'
+import FollowingModel from '../Components/FollowingModel/FollowingModel'
 
 function Index() {
 
@@ -23,7 +23,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
-            <Route path='/test' element={<LoadingSpinner />} />
+            <Route path='/test' element={<FollowingModel />} />
             {
               settingsArr.map((val,index)=>{
                 return (<Route key={index} path={val} element={<Setting />} />)

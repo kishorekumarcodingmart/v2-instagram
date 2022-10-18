@@ -40,11 +40,12 @@ function Login() {
       alert('Wrong Data');
       return
     }
-    sendForm("user/login",formData)
+    sendForm("user/login",formData,null)
     .then(res => {
       console.log(res);
       sessionStorage.setItem('tokenKey', res.accessToken);
-      setNavigate(true)
+      (res.accessToken===null)?alert("Error"):setNavigate(true)
+      
     })
     .catch(err => {
       console.log(err)

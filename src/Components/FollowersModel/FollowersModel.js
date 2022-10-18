@@ -64,7 +64,7 @@ export class FollowersModel extends Component {
                 <header className='sticky top-0 topNavFollowersModel'>
                     <div className='FollowersModelNav flex align-items-center justify-content-between'>
                         <div className='p-2'><h4>Follwers</h4></div>
-                        <div className='p-2 hover'  onClick={() => { this.FollowerModalRef.current.style.display = "none" }}><CloseBtn /></div>
+                        <div className='p-2 hover' onClick={() => { this.FollowerModalRef.current.style.display = "none" }}><CloseBtn /></div>
                     </div>
                 </header>
                 <div className='individualShareFollwerWrapper flex flex-col w-100'>

@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './AccountDetails.css'
 import Input from '../Input/Input'
 import {Setting} from '../../Utils/NavbarButton'
 import IndividualStory from '../IndividualStory/IndividualStory'
 import AccountNavbar from '../AccountNavbar/AccountNavbar'
-import FeedPostGridSystem from '../FeedPostGridSystem/FeedPostGridSystem'
 import FollowersModel from '../FollowersModel/FollowersModel'
+import FollowingModel from '../FollowingModel/FollowingModel'
 
 function AccountDetails() {
 
   const [follwerModel, setFollwerModel] = useState("")
 
+  const [followingModel, setFollowingModel] = useState("")
+
   const openModel = (e) => {
     setFollwerModel(e.current)
-}
+}   
+
+  const openFollowingModel = (e) => {
+    setFollowingModel(e.current)
+  }
 
   return (
     <>
@@ -24,14 +31,16 @@ function AccountDetails() {
             <div className='AccountOtherDetails  flex flex-col'>
                 <div className='flex m-2 align-items-center'>
                     <h2 className='mr-2'>mrkishorekumar</h2>
-                    <Input type="button" value="Edit Profile" className="EditProfileBtn p-1 fw-bold mr-2" />
-                    <div className='SettingIcon'><Setting /></div>
+                    <div>
+                        <Link to="/accounts/edit/"><Input type="button" value="Edit Profile" className="EditProfileBtn p-1 fw-bold mr-2" /></Link>
+                    </div>
+                    <div className='SettingIcon'><Link to="/accounts/edit/"><Setting /></Link></div>
                     
                 </div>
                 <div className='AccountLike flex justify-content-between m-2'>
                     <div className='flex p-2 align-items-center'><div className='fw-bold mr-1'>12</div>posts</div>
                     <div className='flex p-2 align-items-center hover' onClick={()=>{follwerModel.style.display = "flex"} }><div className='fw-bold mr-1'>12</div>followers</div>
-                    <div className='flex align-items-center'><div className='fw-bold mr-1'>12</div>following</div>
+                    <div className='flex align-items-center hover' onClick={()=>{followingModel.style.display = "flex"} }><div className='fw-bold mr-1'>12</div>following</div>
                 </div>
                 <div className='NameCap'>
                     <div className='m-2'><h4>M R Kishore Kumar</h4></div>
@@ -52,8 +61,8 @@ function AccountDetails() {
         <section className='MobileLikeShareComment'>
             <div className='flex justify-content-between align-items-center'>
                 <div className='flex p-2 align-items-center flex-col ml-1'><div className='fw-bold mr-1'>12</div>posts</div>
-                <div className='flex p-2 align-items-center flex-col' ><div className='fw-bold mr-1'>12</div>followers</div>
-                <div className='flex align-items-center flex-col mr-1'><div className='fw-bold mr-1'>12</div>following</div>
+                <div className='flex p-2 align-items-center flex-col'  onClick={()=>{follwerModel.style.display = "flex"} } ><div className='fw-bold mr-1'>12</div>followers</div>
+                <div className='flex align-items-center flex-col mr-1' onClick={()=>{followingModel.style.display = "flex"} }><div className='fw-bold mr-1'>12</div>following</div>
             </div>
             {/* <hr className='line-auto' /> */}
         </section>
@@ -64,8 +73,8 @@ function AccountDetails() {
             </div>
         </div>
         <AccountNavbar />
-        <FeedPostGridSystem />
         <FollowersModel openModel={openModel}/>
+        <FollowingModel openModel={openFollowingModel} />
     </>
   )
 }

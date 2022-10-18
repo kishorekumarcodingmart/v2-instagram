@@ -316,6 +316,10 @@
     color: #8e8e8e;
 }
 
+.text-blue{
+    color: #00376b;
+}
+
 .text-white {
     color: white;
 }
@@ -423,3 +427,12 @@
 }
 
 /* End Display */
+
+
+
+/* Background */
+.bg-red{
+    background-color: red;
+}
+
+/*End Background */

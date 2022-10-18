@@ -8,7 +8,6 @@
 .tab-item span {
     font-size: 12px;
     font-weight: 600;
-    color: hsl(0, 0%, 56%);
     margin-left: 6px;
 }
 
@@ -19,9 +18,9 @@
 }
 
 .tab-item.active {
-    border-top: 1px solid hsl(0, 0%, 15%);
+    border-top: 1px solid black;
     margin-top: -1px;
-    color: hsl(0, 0%, 15%);
+    color: black;
 }
 
 .tabs {
