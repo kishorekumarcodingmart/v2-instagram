@@ -12,7 +12,7 @@ function Feed() {
 
   setTimeout(()=>{
     setFeed(false)
-  },5000)
+  },500)
 
   return (
     <>
