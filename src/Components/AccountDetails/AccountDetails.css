@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+.AccountIndividualStory {
+    display: flex;
+    gap: 1rem;
+}
+
 .lineMD {
     background-color: rgb(220,220,220);
     height: 1px;
@@ -78,7 +83,7 @@
     }
 
     .MobileAccountNameDes, .MoblieAccountIndividualStory {
-        display: block;
+        display: flex;
         width: auto;  
         margin: 2% 7%;
     }

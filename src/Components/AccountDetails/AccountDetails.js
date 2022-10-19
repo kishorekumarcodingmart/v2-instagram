@@ -52,9 +52,12 @@ function AccountDetails() {
             <div className='p-2'><h4>M R kishore Kumar</h4></div>
             <div className='p-2'><p>Just because you're awake doesn't mean you should stop dreaming.</p></div>
         </section>
-        <div className='MoblieAccountIndividualStory'>
+        <div className='MoblieAccountIndividualStory' >
             <div className='MoblieAccountIndividualStoryWrapper'>
-                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="story" />
+                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="mobile" />
+            </div>
+            <div className='MoblieAccountIndividualStoryWrapper'>
+                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="mobile" />
             </div>
         </div>
         <hr className='lineMD' />
@@ -69,7 +72,11 @@ function AccountDetails() {
 
         <div className='AccountIndividualStory'>
             <div className='AccountIndividualStoryWrapper'>
-                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="story" />
+                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="desktop" />
+            </div>
+
+            <div className='AccountIndividualStoryWrapper'>
+                <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="desktop" />
             </div>
         </div>
         <AccountNavbar />

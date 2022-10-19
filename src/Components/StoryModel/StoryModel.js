@@ -10,7 +10,7 @@ function StoryModel({StoryModelFunc}) {
     useEffect(()=>{
         StoryModelFunc(StoryModelRef)
     },[StoryModelFunc])
-    // ref={StoryModelRef}
+
   return (
     <>
         <div id="myModal" className="modal" ref={StoryModelRef}>
