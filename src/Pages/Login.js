@@ -40,10 +40,10 @@ function Login() {
       alert('Wrong Data');
       return
     }
-    sendForm("user/login",formData,null)
+    sendForm("user/login",formData,null,"POST")
     .then(res => {
       console.log(res);
-      sessionStorage.setItem('tokenKey', res.accessToken);
+      localStorage.setItem('tokenKey', res.accessToken);
       (res.accessToken===null)?alert("Error"):setNavigate(true)
       
     })
@@ -72,7 +72,7 @@ function Login() {
           <LoginWithFacebook />
 
           <div className="Forgotten_Password">
-            <Link to="/">Forgotten your password?</Link>
+            <Link to="/accounts/login/">Forgotten your password?</Link>
           </div>
 
         </div>

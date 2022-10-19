@@ -5,7 +5,7 @@ import NavarDropdown from '../NavbarDropdown/NavbarDropdown'
 import './NavbarFooter.css'
 import UploadPost from '../UploadPost/UploadPost'
 
-function NavbarFooter({desktop, children}) {
+function NavbarFooter({desktop,profile, children}) {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     window.addEventListener("resize", () => {
@@ -53,7 +53,7 @@ function NavbarFooter({desktop, children}) {
 
                         {(desktop && windowWidth>600)?(
                             <div className='tooltip'>
-                                <img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/>
+                                <img className="nav-profile-Photo" src={profile.profilePicUrl} alt="ProfilePhoto"/>
                                 <div className="tooltiptext flex flex-col">
                                     <Link className='link' to="/account"><div className='flex m-2 gap-2'><ProfileIcon/> <p>Profile</p></div></Link>
                                     <div className='flex m-2 gap-2'><Saved/> <p>Saved</p></div>
@@ -65,7 +65,7 @@ function NavbarFooter({desktop, children}) {
                                 </div>
                             </div>):
                             (<div>
-                                <Link to='/account'><img className="nav-profile-Photo" src={'https://instagram-clone-mrkishorekumar.netlify.app/img.png'} alt="ProfilePhoto"/></Link>
+                                <Link to='/account'><img className="nav-profile-Photo" src={profile.profilePicUrl} alt="ProfilePhoto"/></Link>
                             </div>)}
                             
                         {/* </Link> */}

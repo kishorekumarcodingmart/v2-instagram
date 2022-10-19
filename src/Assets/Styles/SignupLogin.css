@@ -51,7 +51,10 @@
         width: 100%;
     }
 
-    
-
+    .ResetPasswordModel{
+        width: 100%;
+        border: none;
+        background-color: inherit;
+    }
 
 }

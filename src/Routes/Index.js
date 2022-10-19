@@ -8,6 +8,7 @@ import Explore from '../Pages/Explore'
 import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
+import ResetPassword from '../Pages/ResetPassword'
 import FollowingModel from '../Components/FollowingModel/FollowingModel'
 
 function Index() {
@@ -23,6 +24,7 @@ function Index() {
             <Route path='/explore' element={<Explore />} />
             <Route path='/message' element={<Message />} />
             <Route path='/activity' element={<Activity />} />
+            <Route path='/accounts/login' element={<ResetPassword />} />
             <Route path='/test' element={<FollowingModel />} />
             {
               settingsArr.map((val,index)=>{

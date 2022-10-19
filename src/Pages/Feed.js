@@ -1,25 +1,38 @@
-import React from 'react'
+import React, {  useEffect, useState } from 'react'
 import NavbarFooter from '../Components/NavbarFooter/NavbarFooter'
 import FeedSection from '../Components/Feed/FeedSection'
 import {MobileFeed} from '../Components/MobileNavbar/MobileNavbar'
-import {sendForm} from '../Api/sendForm'
+import LoadingSpinner from '../Components/LoadingSpinner/LoadingSpinner'
+import axios from 'axios'
+
+
 
 function Feed() {
-  sendForm("feed",{accessToken : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwia…2Njd9.MYoEBJ3ByrhuJltU0eeexE_Fu5l8y0qhL4RC0p19kHE"},"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjY2MDkyMjY3LCJleHAiOjE2NjYxNzg2Njd9.MYoEBJ3ByrhuJltU0eeexE_Fu5l8y0qhL4RC0p19kHE")
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err)
-  })
+
+  const [feed, setFeed] = useState({})
+
+  
+
+  useEffect(()=>{
+    axios.get(`${process.env.REACT_APP_API_KEY}feed`, {
+      headers: { 'Content-Type': 'application/json', 'x-access-token' : localStorage.getItem("tokenKey") }})
+      .then(res => {setFeed(res.data) })
+  },[])
+  
+
   return (
     <>
 
-      <NavbarFooter desktop={true}>
-        <MobileFeed/>
-      </NavbarFooter>
-      <FeedSection />
-
+      {(JSON.stringify(feed))==="{}"?<LoadingSpinner />:(
+        <>
+          <NavbarFooter desktop={true} profile={feed.profile}>
+            <MobileFeed />
+          </NavbarFooter>
+            <FeedSection postSection={feed.postSection} profile={feed.profile} storiesSection={feed.storiesSection} suggestionSection={feed.suggestionSection} />
+          
+        </>
+        )
+      }
     </>
   )
 }

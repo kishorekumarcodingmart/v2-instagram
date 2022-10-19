@@ -4,7 +4,21 @@ import './LoadingSpinner.css'
 function LoadingSpinner() {
   return (
     <section className='load'>
-        <div className="loading loading--full-height"></div>
+        <div class="lds-spinner">
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div>
+          <div></div> 
+          <div></div> 
+          <div></div> 
+          <div></div> 
+        </div>
     </section>
   )
 }

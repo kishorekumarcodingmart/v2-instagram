@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+.h-80{
+    height: 80%;
+}
+
 .h-auto {
     height: auto;
 }
@@ -33,6 +37,10 @@
 
 .w-50 {
     width: 50%;
+}
+
+.w-30 {
+    width: 30%;
 }
 
 .w-100vw{
@@ -121,7 +129,7 @@
 }
 
 .fs-3 {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 
@@ -245,6 +253,10 @@
 
 .p-3 {
     padding: 16px;
+}
+
+.px-1 {
+    padding: 4px 0;
 }
 
 .px-2 {
@@ -435,4 +447,26 @@
     background-color: red;
 }
 
+.bg-white {
+    background-color: white;
+}
+
+.bg-gray {
+    background-color: #fafafa;
+}
+
 /*End Background */
+
+
+/* Border */
+
+.bt{
+    border-top: 1px solid #dbdbdb;
+}
+
+.bb{
+    border-bottom: 1px solid #dbdbdb;
+}
+
+
+/* End Border */
