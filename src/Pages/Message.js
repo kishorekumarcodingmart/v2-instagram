@@ -5,6 +5,7 @@ import Inbox from '../Components/Inbox/Inbox'
 import LoadingSpinner from '../Components/LoadingSpinner/LoadingSpinner'
 
 
+
 function Message() {
 
   const [message, setMessage] = useState(true)
@@ -21,7 +22,8 @@ function Message() {
         <NavbarFooter desktop={true}>
           <MobileInbox />
         </NavbarFooter>
-        <Inbox />y
+        <Inbox />
+        
         </>
       )
     }

@@ -39,11 +39,11 @@ function IndividualPost({profilePhoto, postUrl, likes, username, description, co
                     </div>
                     <div className="more-option hover" onClick={() => { optionModal.style.display = "flex" }}><MoreOption/></div>
                 </div>
-                <div className="post-img" onDoubleClick={() => setLike(!like)}>
+                <div className="post-img" >
                     {/* Single Post */}
-                    {!multiPost && <img src={postUrl} alt="post" />  }
+                    {!multiPost && <img src={postUrl} alt="post" onDoubleClick={() => setLike(!like)}/>  }
                     {/* Multi Post */}
-                    {multiPost && <PostSlider postUrl={postUrl} height="400px"/>}
+                    {multiPost && <PostSlider postUrl={postUrl} height="400px" setLike={setLike} like={like}/>}
                 </div>
                 <div className="like-comment-share-save">
                     <div className="like-comment-share hover">

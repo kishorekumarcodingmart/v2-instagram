@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Inbox.css'
 import {MessageBig, NewChat, DownArrowIcon} from '../../Utils/NavbarButton'
 import IndividualChat from '../IndividualChat/IndividualChat'
+import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
+// import {WindowDimensions} from '../../Helper/Window'
 
 const MsgData = [
     {
@@ -94,6 +96,10 @@ const MsgData = [
 function Inbox() {
 
     const [msg, setMsg] = useState({})
+    // console.log(WindowDimensions().width)
+    const chatPage = (val) => {
+        setMsg(val);
+    }
 
   return (
     <>
@@ -110,7 +116,7 @@ function Inbox() {
                         {
                             MsgData.map((val,index)=>{
                                 return(
-                                    <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index} onClick={()=>setMsg(val)}>
+                                    <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index} onClick={()=>chatPage(val)}>
                                         <div><img src={val.imgUrl} className="chatDp" alt="dp" /></div>
                                         <div>
                                             <p className='mb-2 fw-bold'>{val.userName}</p>
@@ -132,11 +138,12 @@ function Inbox() {
                                 <div className='m-2'><button className='p-2 '>Send message</button></div>
                             </div>
                         </div>
-                    ):<div className='w-100'>{<IndividualChat details={msg}/>}</div>
+                    ):<div className='mobileIndchat w-100'>{<IndividualChat details={msg}/>}</div>
                 }
                 
             </div>
         </section>
+        <LoginSignupFooter />
     </>
   )
 }

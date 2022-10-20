@@ -3,7 +3,7 @@ import './PostSlider.css'
 import BtnSlider from './BtnSlider'
 
 
-function PostSlider({postUrl, height}) {
+function PostSlider({postUrl, height, setLike, like}) {
 
 
     const [slideIndex, setSlideIndex] = useState(1)
@@ -36,7 +36,7 @@ function PostSlider({postUrl, height}) {
             {postUrl.map((obj, index) => {
                 return (
                     <div key={index} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-                        <img src={obj.url} alt="post" />
+                        <img src={obj.url} alt="post" onDoubleClick={() => setLike(!like)}/>
                     </div>
                 )
             })}

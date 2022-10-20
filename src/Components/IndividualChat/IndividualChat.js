@@ -4,6 +4,12 @@ import { Phone, VideoCall, Info, SmileEmoji, ImageIcon,ActivityFeedOff} from '..
 
 
 function IndividualChat({details}) {
+
+    // const details = {
+    //     imgUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    //     userName : "infantilelook",
+    // }
+
   return (
     <>
         <section className='ChatAppWrapper h-100 flex flex-col 1'>

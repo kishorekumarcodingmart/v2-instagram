@@ -1,12 +1,8 @@
-@media screen and (max-width: 800px) {
-    .ChatAppWrapper {
-        display: none;
-    }
-}
+
 
 .ChatNavbarWrapper {
     border-bottom: 1px solid #dbdbdb;
-
+    background-color: white;
 }
 
 .ChatArea {
@@ -28,6 +24,7 @@
 .ChatTextArea {
     border: 1px solid #dbdbdb;
     border-radius: 20px;
+    background-color: white;
 }
 
 .ChatInput {

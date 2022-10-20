@@ -91,4 +91,8 @@
     .individualChatWrapper {
         margin-bottom: 9%;
     }
+
+    .mobileIndchat {
+        display: none;
+    }
 }
