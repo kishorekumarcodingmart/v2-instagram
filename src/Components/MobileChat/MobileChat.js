@@ -1,5 +1,5 @@
 import React from 'react'
-import './MobileChat.css'
+
 
 function MobileChat() {
 
