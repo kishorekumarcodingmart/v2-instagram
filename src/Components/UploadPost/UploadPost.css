@@ -10,7 +10,7 @@
   }
   
   .modalContainer {
-    width: 50%;
+    width: 40%;
     height: auto;
     border-radius: 0.8rem;
     background-color: white;
@@ -30,6 +30,12 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  /* #showImg {
+
+  } */
+
+  #showImg img { max-height: 120px; margin: 0 auto;}
   
   .titleCloseBtn button {
     background-color: transparent;
@@ -83,6 +89,8 @@
     background-color: #efefef;
     width: 100%;
   }
+
+
   
   @media only screen and (max-width: 600px) {
     .modalContainer{

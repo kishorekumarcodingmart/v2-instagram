@@ -1,4 +1,4 @@
-import React, {  useRef } from 'react'
+import React, { useRef } from 'react'
 import './UploadPost.css'
 import Input from '../Input/Input'
 
@@ -6,19 +6,15 @@ import Input from '../Input/Input'
 
 function UploadPost({ setOpenModal }) {
 
+    const inputRef = useRef()
+    const imgRef = useRef()
 
-    const showImg = useRef()
-
-    const preview = (file) => {
-        const img = document.createElement("img");
-        img.src = URL.createObjectURL(file);  // Object Blob
-        img.alt = file.name;
-        document.querySelector('#showImg').append(img);
-    }
-
-    const addFiles = (ev) => {
-        if (!ev.target.files) return;
-        [...ev.target.files].forEach(preview);
+    const showImage = () => {
+        let [files] = inputRef.current.files
+        if(files){
+            imgRef.current.style.display = 'block'
+            imgRef.current.src = URL.createObjectURL(files)
+        }
     }
 
   return (
@@ -31,12 +27,9 @@ function UploadPost({ setOpenModal }) {
                 <form>
                     <div className="body">
                         {/* <label>Image URL :</label> */}
-                        <input type="file" accept="image/*" placeholder="Image URL" className="inputUpload" onChange={addFiles}/>
+                        <input type="file" accept="image/*" placeholder="Image URL" className="inputUpload" ref={inputRef} onChange={showImage}/>
                     </div>
-                    {/* <img src=''  className="imgViwer" alt='showImg' style={{display : "none"}}/> */}
-                    <div ref={showImg} id="showImg">
-
-                    </div>
+                    <img src='' ref={imgRef} className="imgViwer" alt='showImg' style={{display : "none"}}/>
                     <div className="body">
                     {/* <label>Caption :</label> */}
                     <Input type="text" placeholder="Caption" className="inputUpload" />
