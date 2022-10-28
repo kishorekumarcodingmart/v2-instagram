@@ -7,6 +7,7 @@ import EditProfile from '../AllSetting/EditProfile/EditProfile'
 import ChangePassword from '../AllSetting/ChangePassword/ChangePassword'
 import AppsAndWebsites from '../AllSetting/AppsAndWebsites/AppsAndWebsites'
 import EmailNotifications from '../AllSetting/EmailNotifications/EmailNotifications'
+import PushNotifications from '../AllSetting/PushNotifications/PushNotifications'
 
 
 const SettingOption = [
@@ -70,6 +71,10 @@ const settingLayout = () => {
 
     else if(window.location.pathname==="/emails/settings/") {
         return (<EmailNotifications />)
+    }
+
+    else if(window.location.pathname==="/push/web/settings/") {
+        return (<PushNotifications />)
     }
 }
 

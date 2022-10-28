@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from '../../Input/Input'
+import CustomRadioButton from '../../CustomRadioButton/CustomRadioButton'
 import './EmailNotifications.css'
 
 const SettingEmailNotifications = ["Feedback emails","Reminder emails","Product emails","News emails","Support emails"]
@@ -13,10 +13,12 @@ function EmailNotifications() {
                     return (
                         <div className='my-4' key={index}>
                             <h4>{val}</h4>
-                            <Input name={val} type="radio" className="mr-2 mt-3"/>
-                            <label className="mr-2">Off</label>
-                            <Input name={val} type="radio" className="mr-2 mt-3" defaultChecked/>
-                            <label>On</label>
+                            <div className='my-2'>
+                                <CustomRadioButton val="Off" name={val}/>
+                            </div>
+                            <div className='my-3'>
+                                <CustomRadioButton val="On" name={val}/>
+                            </div>
                         </div>
                     )
                 })
