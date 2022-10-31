@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Inbox.css'
+import LazyLoading from '../LazyLoading/LazyLoading'
 import {MessageBig, NewChat, DownArrowIcon} from '../../Utils/NavbarButton'
 import IndividualChat from '../IndividualChat/IndividualChat'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
@@ -95,6 +96,12 @@ const MsgData = [
 
 function Inbox() {
 
+    const [loading, setLoading ] = useState(true)
+
+    setTimeout(()=>{
+        setLoading(false)
+    },1000)
+
     const [msg, setMsg] = useState({})
     // console.log(WindowDimensions().width)
     const chatPage = (val) => {
@@ -117,11 +124,24 @@ function Inbox() {
                             MsgData.map((val,index)=>{
                                 return(
                                     <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index} onClick={()=>chatPage(val)}>
-                                        <div><img src={val.imgUrl} className="chatDp" alt="dp" /></div>
-                                        <div>
-                                            <p className='mb-2 fw-bold'>{val.userName}</p>
-                                            <div className='text-gray flex gap-2'><p>{val.msg}</p> · <p>{val.timeStamp}</p></div>
-                                        </div>
+                                        {
+                                            (loading)?(<>
+                                                <div><LazyLoading classN="chatDpLazy" /></div>
+                                                <div>
+                                                    <div><LazyLoading classN="chatUserNameLazy mb-2" /></div>
+                                                    <div><LazyLoading classN="chatTimeLazy" /></div>
+                                                </div>
+                                            </>):(
+                                                <>
+                                                <div><img src={val.imgUrl} className="chatDp" alt="dp" /></div>
+                                                <div>
+                                                    <p className='mb-2 fw-bold'>{val.userName}</p>
+                                                    <div className='text-gray flex gap-2'><p>{val.msg}</p> · <p>{val.timeStamp}</p></div>
+                                                </div>
+                                                </>
+                                            )
+                                        }
+                                        
                                     </div>
                                 )
                             })

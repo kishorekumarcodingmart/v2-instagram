@@ -9,7 +9,6 @@ import Account from '../Pages/Account'
 import Activity from '../Pages/Activity'
 import Setting from '../Pages/Setting'
 import ResetPassword from '../Pages/ResetPassword'
-import MobileChat from '../Components/MobileChat/MobileChat'
 
 function Index() {
 
@@ -48,10 +47,6 @@ function Index() {
       path : "/accounts/login",
       component : <ResetPassword />,
     },
-    {
-      path : "/chat",
-      component : <MobileChat />,
-    }
      
   ]
   

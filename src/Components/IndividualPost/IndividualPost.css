@@ -61,6 +61,24 @@
     font-size: 0.7rem;
 }
 
+.postLazyUsername {
+    width: 5rem;
+    height: 0.6rem;
+    padding-left: 1rem;
+}
+
+.photoLazyLoading {
+    width: 2.2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.postImgLazyLoading {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
 @media only screen and (max-width: 600px){
     .individual-post {
         border: 1px solid rgb(220,220,220);

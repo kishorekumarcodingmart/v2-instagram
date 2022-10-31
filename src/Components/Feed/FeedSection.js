@@ -184,7 +184,7 @@ function FeedSection() {
                 <div className="post-setion-wrapper">
                     {
                         post.map((val,index)=>{
-                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} multiPost={val.multiPost} profilePhoto={val.profilePhoto} />)
+                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} multiPost={val.multiPost} profilePhoto={val.profilePhoto} loading={loading}/>)
                         })
                     }
                 </div>

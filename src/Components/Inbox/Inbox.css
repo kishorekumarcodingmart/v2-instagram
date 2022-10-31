@@ -35,6 +35,22 @@
     border-radius: 50%;
 }
 
+.chatDpLazy {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.chatUserNameLazy {
+    width: 6rem;
+    height: 0.8rem;
+}
+
+.chatTimeLazy {
+    width: 4rem;
+    height: 0.8rem;
+}
+
 .individualChat {
     padding: 1%;
     margin: 2% ;
