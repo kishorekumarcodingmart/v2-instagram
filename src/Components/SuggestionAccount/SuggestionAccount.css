@@ -24,6 +24,26 @@
     border-radius: 50%;
 }
 
+.suggestion-section-photo-Lazy {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 2px 0;
+}
+
+.lazySuggestionUsername {
+    width: 7rem;
+    height: 0.8rem;
+    border-radius: 2px;
+    margin: 3px 0;
+}
+
+.lazySuggestionName {
+    width: 5rem;
+    height: 0.8rem;
+    border-radius: 2px;
+    margin: 3px 0;
+}
 
 .follow {
     font-size: 0.8rem;

@@ -210,7 +210,7 @@ function FeedSection() {
 
                     {
                         suggestion.map((val,index)=>{
-                            return (<SuggestionAccount key={index} profilePhoto={val.profilePhoto} name={val.name} userName={val.userName}/>)
+                            return (<SuggestionAccount key={index} profilePhoto={val.profilePhoto} name={val.name} userName={val.userName} loading={loading}/>)
                         })
                     }
         
