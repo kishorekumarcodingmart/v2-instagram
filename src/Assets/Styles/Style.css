@@ -172,7 +172,7 @@
 }
 
 .mt-3{
-    margin-top: 16px;
+    margin-top: 16px !important;
 }
 
 .mt-4{
@@ -185,6 +185,14 @@
 
 .mx-3 {
     margin: 0 16px;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.mx-10 {
+    margin: 0 10%;
 }
 
 .my-1 {

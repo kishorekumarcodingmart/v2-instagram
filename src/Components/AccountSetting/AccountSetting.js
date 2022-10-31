@@ -8,7 +8,10 @@ import ChangePassword from '../AllSetting/ChangePassword/ChangePassword'
 import AppsAndWebsites from '../AllSetting/AppsAndWebsites/AppsAndWebsites'
 import EmailNotifications from '../AllSetting/EmailNotifications/EmailNotifications'
 import PushNotifications from '../AllSetting/PushNotifications/PushNotifications'
-
+import ManageContacts from '../AllSetting/ManageContacts/ManageContacts'
+import SuperVision from '../AllSetting/SuperVision/SuperVision'
+import EmailsFromInstagram from '../AllSetting/EmailsFromInstagram/EmailsFromInstagram'
+import Help from '../AllSetting/Help/Help'
 
 const SettingOption = [
     {
@@ -75,6 +78,22 @@ const settingLayout = () => {
 
     else if(window.location.pathname==="/push/web/settings/") {
         return (<PushNotifications />)
+    }
+
+    else if(window.location.pathname==="/accounts/contact_history/") {
+        return (<ManageContacts />)
+    }
+
+    else if(window.location.pathname==="/accounts/supervision/") {
+        return (<SuperVision />)
+    }
+
+    else if(window.location.pathname==="/emails/emails_sent/") {
+        return (<EmailsFromInstagram />)
+    }
+
+    else if(window.location.pathname==="/settings/help/") {
+        return (<Help />)
     }
 }
 

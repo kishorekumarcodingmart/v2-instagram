@@ -1,6 +1,5 @@
 import React from 'react'
 import CustomRadioButton from '../../CustomRadioButton/CustomRadioButton'
-import './EmailNotifications.css'
 
 const SettingEmailNotifications = ["Feedback emails","Reminder emails","Product emails","News emails","Support emails"]
 
