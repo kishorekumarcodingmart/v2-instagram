@@ -2,6 +2,12 @@
     cursor: pointer;
 }
 
+.storyLazy {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border-radius: 50%;
+}
+
 .individual-story:first-child{
     margin: 0 0;
 }
@@ -29,6 +35,20 @@
     font-size: 0.7rem;
     white-space: nowrap; 
     width: 3.5rem; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.storyLazyTitle {
+    text-align: center;
+    margin-top: 0.2rem;
+    position: relative;
+    top: -0.6rem;
+    left: 0.5rem;
+    font-size: 0.7rem;
+    white-space: nowrap; 
+    width: 3.5rem; 
+    height: 1rem;
     overflow: hidden;
     text-overflow: ellipsis; 
 }

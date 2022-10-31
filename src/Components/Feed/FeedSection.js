@@ -131,6 +131,12 @@ const suggestion = [
 function FeedSection() {
     // console.log(postSection)
     const [refState , setRefState] = useState("")
+
+    const [loading, setLoading ] = useState(true)
+
+    setTimeout(()=>{
+        setLoading(false)
+    },1000)
     
 
   const StoryModelFunc = (data) => {
@@ -146,10 +152,32 @@ function FeedSection() {
     <section className="main-content">
         <div className="grid-system-for-desktop">
             <div className="left-col">
+                <div className="w-100 flex justify-content-center">
+                {
+                        (loading)?<>
+                            <div className="loadingFeed w-100">
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div>
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                <div></div> 
+                                </div>
+                        </>:null
+                    }
+                </div>
                 <div className="story-section-wrapper">
+                
                     {
                         story.map((val,index)=>{
-                            return (<IndividualStory key={index} img={val.profilePhoto} username={val.userName} onClickFunc={onClickFunc}/>)
+                            return (<IndividualStory key={index} img={val.profilePhoto} username={val.userName} onClickFunc={onClickFunc} loading={loading}/>)
                         })
                     }
                 </div>

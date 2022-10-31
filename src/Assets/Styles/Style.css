@@ -15,9 +15,21 @@
     height: 100%;
 }
 
+.h-1rem{
+    height: 1rem;
+}
+
+.h-4rem{
+    height: 4.5rem;
+}
+
 /* End Heigtht */
 
 /* Width */
+
+.w-4rem {
+    width: 4.5rem;
+}
 
 .w-auto {
     width: auto;
@@ -482,3 +494,20 @@
 
 
 /* End Border */
+
+
+/* Border Radius */
+
+.br-1 {
+    border-radius: 8px;
+}
+
+.br-50 {
+    border-radius: 50%;
+}
+
+/* End Border Radius */
+
+/* Story Lazy Loadnig */
+
+
