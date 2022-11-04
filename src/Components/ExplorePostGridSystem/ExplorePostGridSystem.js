@@ -1,42 +1,38 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './ExplorePostGridSystem.css'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
-// import Reels from '../../Assets/video/reels.mp4'
+import Explorelist from '../../Utils/Explorelist.json'
 
-const Explorelist = [
-    [
-        "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1608506436795-af65d01305bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1573541685170-ab9580ca12c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1626745844804-bf833f5838e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1553875039-011cd517d6a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1604041679865-a506e0e30ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1532360007308-dae5348c77c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/flagged/photo-1553875039-4da1e0d2fffb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1598586958772-8bf368215c2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60",
-    ],
-    [
-        "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1608506436795-af65d01305bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1573541685170-ab9580ca12c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1626745844804-bf833f5838e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1553875039-011cd517d6a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1604041679865-a506e0e30ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1532360007308-dae5348c77c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/flagged/photo-1553875039-4da1e0d2fffb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGNhcnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60",
-        "https://images.unsplash.com/photo-1598586958772-8bf368215c2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60",
-    ],
 
-]
 
 
 function ExplorePostGridSystem() {
+
+  const rows = 2
+
+  const [post, setPost] = useState([...Explorelist.slice(0,2)])
+  const [page, setPage] = useState(1)
+
+  useEffect(()=>{
+    console.log(page*rows-rows)
+    console.log(page*rows)
+    setPost([...Explorelist.slice(0,page*rows)])
+  },[page])
+
+  const handlescroll = () => {
+    if(window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
+      setPage(prev=>prev+1)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll',handlescroll)
+  },[])
+
   return (
     <>
         {
-            Explorelist.map((val,index)=>{
+            post.map((val,index)=>{
                 return(
                     <section key={index}>
                         <div className="container1">
