@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import './AccountDetails.css'
 import Input from '../Input/Input'
 import {Setting} from '../../Utils/NavbarButton'
@@ -10,6 +11,8 @@ import FollowingModel from '../FollowingModel/FollowingModel'
 
 function AccountDetails() {
 
+  const user = useSelector((state)=>state.profile.details)
+  
   const [follwerModel, setFollwerModel] = useState("")
 
   const [followingModel, setFollowingModel] = useState("")
@@ -26,11 +29,11 @@ function AccountDetails() {
     <>
         <section className='AccountDetailsWrapper flex align-items-center'>
             <div className='AccountProfilePhoto'>
-                <img src={"https://instagram-clone-mrkishorekumar.netlify.app/img.png"} alt="dp" />
+                <img src={user.profilePhoto} alt="dp" />
             </div>
             <div className='AccountOtherDetails  flex flex-col'>
                 <div className='flex m-2 align-items-center'>
-                    <h2 className='mr-2'>mrkishorekumar</h2>
+                    <h2 className='mr-2'>{user.userName}</h2>
                     <div>
                         <Link to="/accounts/edit/"><Input type="button" value="Edit Profile" className="EditProfileBtn p-1 fw-bold mr-2" /></Link>
                     </div>
@@ -43,15 +46,16 @@ function AccountDetails() {
                     <div className='flex align-items-center hover' onClick={()=>{followingModel.style.display = "flex"} }><div className='fw-bold mr-1'>12</div>following</div>
                 </div>
                 <div className='NameCap'>
-                    <div className='m-2'><h4>M R Kishore Kumar</h4></div>
-                    <div className='m-2'><p>Just because you're awake doesn't mean you should stop dreaming.</p></div>
+                    <div className='m-2'><h4>{user.Name}</h4></div>
+                    <div className='m-2'><p>{user.userCaptions}</p></div>
                 </div>
             </div>
         </section>
         <section className='MobileAccountNameDes flex flex-col'>
-            <div className='p-2'><h4>M R kishore Kumar</h4></div>
-            <div className='p-2'><p>Just because you're awake doesn't mean you should stop dreaming.</p></div>
+            <div className='p-2'><h4>{user.name}</h4></div>
+            <div className='p-2'><p>{user.userCaptions}</p></div>
         </section>
+
         <div className='MoblieAccountIndividualStory' >
             <div className='MoblieAccountIndividualStoryWrapper'>
                 <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="mobile" />
@@ -60,6 +64,7 @@ function AccountDetails() {
                 <IndividualStory img="https://instagram-clone-mrkishorekumar.netlify.app/img.png" username="mobile" />
             </div>
         </div>
+        
         <hr className='lineMD' />
         <section className='MobileLikeShareComment'>
             <div className='flex justify-content-between align-items-center'>

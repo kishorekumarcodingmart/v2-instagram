@@ -4,7 +4,7 @@ import './Assets/Styles/index.sass';
 import './Assets/Styles/Style.sass'
 import App from './App';
 import {Provider} from 'react-redux'
-import Store from '../src/Redux/index'
+import {store} from './Features/index'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ root.render(
   
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={Store}>
+      <Provider store={store}>
         <App />
       </Provider>
     </BrowserRouter>
