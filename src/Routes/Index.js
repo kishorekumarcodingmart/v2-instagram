@@ -12,7 +12,7 @@ import ResetPassword from '../Pages/ResetPassword'
 
 function Index() {
 
-  const settingsArr = ['/accounts/edit/','/accounts/password/change/','/accounts/manage_access/','/emails/settings/','/push/web/settings/','/accounts/contact_history/','/accounts/privacy_and_security/','/accounts/supervision/','/session/login_activity/','/emails/emails_sent/','/settings/help/']
+  const settingsArr = ['/accounts/edit/','/accounts/theme/','/accounts/password/change/','/accounts/manage_access/','/emails/settings/','/push/web/settings/','/accounts/contact_history/','/accounts/privacy_and_security/','/accounts/supervision/','/session/login_activity/','/emails/emails_sent/','/settings/help/']
   
   const Router = [
     {

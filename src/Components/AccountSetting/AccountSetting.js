@@ -4,6 +4,7 @@ import './AccountSetting.css'
 import {MetaSection} from '../../Utils/NavbarButton'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
 import EditProfile from '../AllSetting/EditProfile/EditProfile'
+import ThemeSetting from '../AllSetting/ThemeSetting/ThemeSetting'
 import ChangePassword from '../AllSetting/ChangePassword/ChangePassword'
 import AppsAndWebsites from '../AllSetting/AppsAndWebsites/AppsAndWebsites'
 import EmailNotifications from '../AllSetting/EmailNotifications/EmailNotifications'
@@ -17,6 +18,10 @@ const SettingOption = [
     {
         PageName : "Edit Profile",
         path : "/accounts/edit/"
+    },
+    {
+        PageName : "Theme",
+        path : "/accounts/theme/"
     },
     {
         PageName : "Change password",
@@ -63,6 +68,9 @@ const SettingOption = [
 const settingLayout = () => {
     if (window.location.pathname==="/accounts/edit/"){
         return (<EditProfile />)
+    }
+    else if (window.location.pathname==="/accounts/theme/"){
+        return (<ThemeSetting />)
     }
     else if(window.location.pathname==="/accounts/password/change/") {
         return (<ChangePassword />)
