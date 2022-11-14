@@ -1,12 +1,15 @@
 import React from 'react'
 import './LoginSignupFooter.css'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { footerLinkList } from '../../Utils/Const'
 
 function LoginSignupFooter() {
+  const theme = useSelector((state)=>state.theme.data.dark)
+
   return (
     <>
-        <footer className='flex flex-col justify-content-center pt-2 pb-5 footer'>
+        <footer className={theme?"drak-body flex flex-col justify-content-center pt-2 pb-5 footer":"flex flex-col justify-content-center pt-2 pb-5 footer"}>
 
             <div className='flex flex-wrap flex-row justify-content-center align-items-center'>
                 {

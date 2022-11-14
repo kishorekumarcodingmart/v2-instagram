@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { sendForm } from '../Api/sendForm'
+import { useSelector } from 'react-redux'
 import { validateEmail, validatePassword, validatePhone, validateUserName } from '../Helper/Validate'
 import { Link, Navigate } from 'react-router-dom';
 import '../Assets/Styles/SignupLogin.css'
-import Instgarm from '../Assets/Images/instagram-title.png'
+import {InstagramLogo} from '../Utils/NavbarButton'
 import Input from '../Components/Input/Input';
 import SignupLoginWrapper from '../Components/SignupLoginWrapper/SignupLoginWrapper';
 import DividerSection from '../Components/DividerSection/DividerSection';
@@ -15,6 +16,9 @@ import LoginSignupFooter from '../Components/LoginSignupFooter/LoginSignupFooter
 // location, deviceName
 
 function Login() {
+
+  const theme = useSelector((state)=>state.theme.data.dark)
+
   document.title = "Log in • Instagram";
 
   const [formData, setFormData] = useState({userName:"", password:"", deviceName:window.navigator.userAgent, location : "Codingmart"})
@@ -55,15 +59,15 @@ function Login() {
 
   return (
     <>
-      <section className="wrapper-section flex flex-col justify-content-center align-items-center vh-100">
-        <div className="w-box flex flex-col justify-content-center align-items-center">
+      <section className={theme?"drak-body wrapper-section flex flex-col justify-content-center align-items-center vh-100":"wrapper-section flex flex-col justify-content-center align-items-center vh-100"}>
+        <div className={theme?"drak-border drak-head w-box flex flex-col justify-content-center align-items-center":"w-box flex flex-col justify-content-center align-items-center"}>
           <div className='mt-4 mb-3'>
-            <img src={Instgarm} alt="Instgarm" />
+            <InstagramLogo />
           </div>
 
           <form action="/feed" method='POST' onSubmit={handleForm} className='w-100 p-2 flex flex-col justify-content-center align-items-center'>
-            <Input onChange={handleChange} value={formData.userName} type="text" name="userName" placeholder="Mobile Number or Email" className="m-1 p-2" />
-            <Input onChange={handleChange} value={formData.password} type="password" name="password" placeholder="Password" className="m-1 p-2" />  
+            <Input onChange={handleChange} value={formData.userName} type="text" name="userName" placeholder="Mobile Number or Email" className={theme?"drak-body drak-border m-1 p-2":"m-1 p-2"}/>
+            <Input onChange={handleChange} value={formData.password} type="password" name="password" placeholder="Password" className={theme?"drak-body drak-border m-1 p-2":"m-1 p-2"} />  
             <Input type="submit" value="Log in" className="m-1 p-2" />  
           </form>
 
