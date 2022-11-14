@@ -35,6 +35,10 @@
     font-size: 80%;
 }
 
+.ResetPasswordModel{
+    border : 1px solid #dbdbdb;
+}
+
 @media screen and (max-width: 800px) {
     .w-box {
         width: 80%;
