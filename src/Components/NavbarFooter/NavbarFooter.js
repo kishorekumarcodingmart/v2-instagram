@@ -4,8 +4,13 @@ import { SwitchAccount, ReportAProblem, Setting, Saved, ProfileIcon, HomeOn, Hom
 import NavarDropdown from '../NavbarDropdown/NavbarDropdown'
 import './NavbarFooter.css'
 import UploadPost from '../UploadPost/UploadPost'
+import { useSelector } from 'react-redux'
+
 
 function NavbarFooter({desktop, children}) {
+
+    const theme = useSelector((state)=>state.theme.data.dark)
+
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     window.addEventListener("resize", () => {
@@ -16,7 +21,7 @@ function NavbarFooter({desktop, children}) {
 
   return (
     <>
-        <nav className="navbar-wrapper">
+        <nav className={theme?"drak-head drak-border-bottom navbar-wrapper":"navbar-wrapper"}>
             <section className="navbar-content-wrapper">
                 {/* <!-- Logo DropDown --> */}
                 {
@@ -26,9 +31,9 @@ function NavbarFooter({desktop, children}) {
                 {/* <!-- Search and Menu Icons --> */}
                 <div className="search-menu-icons">
                     <div className="search-box">
-                        <input type="search" placeholder="Search" /> 
+                        <input type="search" placeholder="Search" className={theme?"drak-body":""} /> 
                     </div>
-                    <div className="menu-isons">
+                    <div className={theme?"drak-head drak-border-top menu-isons":"menu-isons"}>
                         <Link className="icons" to='/'>
                             {(window.location.pathname==='/')?<HomeOn />:<HomeOf />}
                             

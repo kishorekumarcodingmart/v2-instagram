@@ -1,5 +1,6 @@
 import React from 'react'
 import './IndividualChat.css'
+import { useSelector } from 'react-redux'
 import { Phone, VideoCall, Info, SmileEmoji, ImageIcon,ActivityFeedOff} from '../../Utils/NavbarButton'
 
 
@@ -10,10 +11,13 @@ function IndividualChat({details}) {
     //     userName : "infantilelook",
     // }
 
+  const theme = useSelector((state)=>state.theme.data.dark)
+
+
   return (
     <>
-        <section className='ChatAppWrapper h-100 flex flex-col 1'>
-            <div className='ChatNavbarWrapper w-100 flex justify-content-between align-items-center p-2 sticky top-0'>
+        <section className='ChatAppWrapper vh-90 flex flex-col 1'>
+            <div className={theme?"drak-border-bottom drak-head ChatNavbarWrapper w-100 flex justify-content-between align-items-center p-2 sticky top-0":"ChatNavbarWrapper w-100 flex justify-content-between align-items-center p-2 sticky top-0"}>
                 <div className='flex align-items-center gap-2'>
                     <div><img src={details.imgUrl} className="IndividualChatDp" alt="dp" /></div>
                     <div>{details.userName}</div>
@@ -78,10 +82,10 @@ function IndividualChat({details}) {
                     </div>
                 </div>
             </div>
-            <div className='ChatTextArea flex justify-content-between align-items-center p-2 m-1 sticky bottom-0 left-0'>
+            <div className={theme?"drak-body drak-border ChatTextArea flex justify-content-between align-items-center p-2 m-1 sticky bottom-0 left-0":'ChatTextArea flex justify-content-between align-items-center p-2 m-1 sticky bottom-0 left-0'}>
                 <div className='flex align-items-center gap-2 py-2'>
                     <div><SmileEmoji /></div>
-                    <div><input className='ChatInput' placeholder='Message...'/></div>
+                    <div><input className={theme?"drak-body ChatInput":"ChatInput"} placeholder='Message...'/></div>
                 </div>
                 <div className='flex align-items-center gap-2 py-2'>
                     <div><ImageIcon /></div>

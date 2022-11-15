@@ -4,6 +4,8 @@ import LazyLoading from '../LazyLoading/LazyLoading'
 import {MessageBig, NewChat, DownArrowIcon} from '../../Utils/NavbarButton'
 import IndividualChat from '../IndividualChat/IndividualChat'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
+import { useSelector } from 'react-redux'
+
 // import {WindowDimensions} from '../../Helper/Window'
 
 const MsgData = [
@@ -98,6 +100,9 @@ function Inbox() {
 
     const [loading, setLoading ] = useState(true)
 
+    const theme = useSelector((state)=>state.theme.data.dark)
+
+
     setTimeout(()=>{
         setLoading(false)
     },1000)
@@ -110,10 +115,10 @@ function Inbox() {
 
   return (
     <>
-        <section className='InboxWrapperDesktop flex justify-content-center align-items-center w-100 1'>
-            <div className='ChatMobileDesktop flex w-100 2'>
-                <div className='chatbox 3'>
-                    <div className='UsernameChatDesktop 4 flex justify-content-center align-items-center gap-3 p-2'>
+        <section className={theme?"drak-body InboxWrapperDesktop flex justify-content-center align-items-center w-100 1":"InboxWrapperDesktop flex justify-content-center align-items-center w-100 1"}>
+            <div className={theme?"drak-head drak-border ChatMobileDesktop flex w-100 2":"ChatMobileDesktop flex w-100 2"}>
+                <div className={theme?"drak-border-right chatbox 3":"chatbox 3"}>
+                    <div className={theme?"drak-border-bottom UsernameChatDesktop 4 flex justify-content-center align-items-center gap-3 p-2":"UsernameChatDesktop 4 flex justify-content-center align-items-center gap-3 p-2"}>
                         <div className=''><h4>mrkishorekumar</h4></div>
                         <div className='downArrow '><DownArrowIcon /></div>
                         <div className=''><NewChat /></div>
@@ -123,7 +128,7 @@ function Inbox() {
                         {
                             MsgData.map((val,index)=>{
                                 return(
-                                    <div className='individualChat flex align-items-center w-100 gap-2 w-100' key={index} onClick={()=>chatPage(val)}>
+                                    <div className={theme?"drak-div individualChat flex align-items-center w-100 gap-2 w-100":"individualChat flex align-items-center w-100 gap-2 w-100"} key={index} onClick={()=>chatPage(val)}>
                                         {
                                             (loading)?(<>
                                                 <div><LazyLoading classN="chatDpLazy" /></div>
