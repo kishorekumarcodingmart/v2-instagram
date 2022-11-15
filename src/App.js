@@ -1,5 +1,6 @@
 import React from "react";
 import Index from "./Routes/Index";
+import { useSelector } from 'react-redux'
 import { useDispatch } from "react-redux";
 import { addDetails } from './Features/profileDetails'
 import { addUserDetails } from './Features/postStories'
@@ -24,11 +25,14 @@ function App() {
     feedStories : [...postStories.feedStories]
   }))
 
+  const theme = useSelector((state)=>state.theme.data.dark)
+  
+
 
   return (
-    <>
+    <div className={theme?"drak-body":""}>
       <Index />
-    </>
+    </div>
   );
 }
 

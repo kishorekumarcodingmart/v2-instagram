@@ -33,7 +33,7 @@ function NavbarFooter({desktop, children}) {
                     <div className="search-box">
                         <input type="search" placeholder="Search" className={theme?"drak-body":""} /> 
                     </div>
-                    <div className={theme?"drak-head drak-border-top menu-isons":"menu-isons"}>
+                    <div className={theme?"drak-head menu-isons":"menu-isons"}>
                         <Link className="icons" to='/'>
                             {(window.location.pathname==='/')?<HomeOn />:<HomeOf />}
                             

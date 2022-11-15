@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react'
 import './ExplorePostGridSystem.css'
 import LoginSignupFooter from '../LoginSignupFooter/LoginSignupFooter'
 import Explorelist from '../../Utils/Explorelist.json'
-
-
-
+import { useSelector } from 'react-redux'
 
 function ExplorePostGridSystem() {
+
+  const theme = useSelector((state)=>state.theme.data.dark)
+
 
   const rows = 2
 
@@ -34,7 +35,7 @@ function ExplorePostGridSystem() {
         {
             post.map((val,index)=>{
                 return(
-                    <section key={index}>
+                    <section key={index} className={theme?"drak-body":""}>
                         <div className="container1">
                             <div className="Reels">
                                 <img className='grid-img' src={val[0]} alt="post" />
