@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './FeedSection.css'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import IndividualStory from '../IndividualStory/IndividualStory'
 import IndividualPost from '../IndividualPost/IndividualPost'
@@ -88,6 +89,9 @@ const suggestion = [
 
 function FeedSection() {
 
+    const theme = useSelector((state)=>state.theme.data.dark)
+
+
     const rows = 5
 
     const [post, setPost] = useState([...Post.slice(0,5)])
@@ -152,7 +156,7 @@ function FeedSection() {
                         </>:null
                     }
                 </div>
-                <div className="story-section-wrapper">
+                <div className={theme?"drak-head drak-border story-section-wrapper":"story-section-wrapper"}>
                 
                     {
                         story.map((val,index)=>{
@@ -163,7 +167,7 @@ function FeedSection() {
                 <div className="post-setion-wrapper">
                     {
                         post.map((val,index)=>{
-                            return(<IndividualPost key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} multiPost={val.multiPost} profilePhoto={val.profilePhoto} loading={loading}/>)
+                            return(<IndividualPost theme={theme} key={index} postUrl={val.postUrl} likes={val.likes} username={val.username} description={val.description} commentCount={val.commentCount} timeStamp={val.timeStamp} multiPost={val.multiPost} profilePhoto={val.profilePhoto} loading={loading}/>)
                         })
                     }
                 </div>

@@ -1,5 +1,6 @@
 import React,  { useEffect, useRef } from 'react'
 import './CommentSection.css'
+import { useSelector } from 'react-redux'
 import {RedLiked, ActivityFeedOff,Comment,SharePost, PostSave, SmileEmoji} from '../../Utils/NavbarButton'
 import PostSlider from '../PostSlider/PostSlider'
 
@@ -50,6 +51,8 @@ const commmentslist = [
 
 function CommentSection({openComment, imgUrl, profilePhoto, username, likes, timeStamp, multiPost, setLike, like}) {
 
+  const theme = useSelector((state)=>state.theme.data.dark)
+
   const ComentModel = useRef()
   useEffect(()=>{
     openComment(ComentModel)
@@ -58,14 +61,14 @@ function CommentSection({openComment, imgUrl, profilePhoto, username, likes, tim
     <>
         <section className='CommentModalPopup' ref={ComentModel} >
             <div className='commentModal flex'>
-                <div className='commentPost'>
+                <div className={theme?"drak-border-right commentPost":"commentPost"}>
                     {
                         ((!multiPost )?<img src={imgUrl} alt="dp" /> : <PostSlider postUrl={imgUrl} height="100%"/>)
                     }
                     
                 </div>
-                <div className='commentSection flex flex-col w-100 relative'>
-                    <div className='commentSectionNav flex justify-content-between align-items-center w-100 p-2 sticky top-0'>
+                <div className={theme?"drak-head commentSection flex flex-col w-100 relative":"commentSection flex flex-col w-100 relative"}>
+                    <div className={theme?"drak-border-bottom commentSectionNav flex justify-content-between align-items-center w-100 p-2 sticky top-0":"commentSectionNav flex justify-content-between align-items-center w-100 p-2 sticky top-0"}>
                         <div className='flex align-items-center py-2 mt-2'>
                             <div><img src={profilePhoto} className="commentSectionNavDp mr-2" alt="dp" /></div>
                             <div className='fw-bold'>{username}</div>
@@ -103,7 +106,7 @@ function CommentSection({openComment, imgUrl, profilePhoto, username, likes, tim
                         
                             
                     </div>
-                    <div className='border-footer-comment w-100 pt-2  bottom-0 left-0'>
+                    <div className={theme?"drak-border-top drak-head border-footer-comment w-100 pt-2  bottom-0 left-0":"border-footer-comment w-100 pt-2  bottom-0 left-0"}>
                         <div className='w-100 flex justify-content-between'>
                             <div className='flex gap-3 pl-2'>
                                 <div onClick={() => setLike(!like)}>
@@ -118,10 +121,10 @@ function CommentSection({openComment, imgUrl, profilePhoto, username, likes, tim
                         </div>
                         <div className='fw-fold fs-3 pl-2 px-2'>{likes} likes</div>
                         <div className='text-gray fs-2 pl-2 pb-3'>{timeStamp}</div>
-                        <div className='inputBorderComment w-100 flex justify-content-between px-2 align-items-center'>
+                        <div className={theme?"drak-border-top inputBorderComment w-100 flex justify-content-between px-2 align-items-center":"inputBorderComment w-100 flex justify-content-between px-2 align-items-center"}>
                             <div className='flex gap-3 pl-2 align-items-center'>
                                 <SmileEmoji />
-                                <input type="text" className='typeCommentPopup p-2' placeholder='Add a Comment...' />
+                                <input type="text" className={theme?"drak-head typeCommentPopup p-2":"typeCommentPopup p-2"} placeholder='Add a Comment...' />
                             </div>
                             <div className='pr-2'>
                                 <h5 className='colorBlue hover'>Post</h5>

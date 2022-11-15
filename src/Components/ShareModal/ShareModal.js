@@ -51,15 +51,15 @@ export class ShareModal extends Component {
     return (
       <>
         <section className='shareModelPopUp' ref={this.ShareModalRef}>
-            <div className='shareModel w-100 flex flex-col '>
+            <div className={this.props.theme?"drak-head shareModel w-100 flex flex-col":"shareModel w-100 flex flex-col"}>
                 <header className='sticky top-0 topNavShareModel'>
-                    <div className='shareModelNav flex align-items-center justify-content-between'>
+                    <div className={this.props.theme?"drak-border-bottom shareModelNav flex align-items-center justify-content-between":"shareModelNav flex align-items-center justify-content-between"}>
                         <div className='p-2'><h4>Share</h4></div>
                         <div className='p-2 hover' onClick={() => { this.ShareModalRef.current.style.display = "none" }}><CloseBtn /></div>
                     </div>
                     <div className='shareModelSearch align-items-center flex w-100'>
                         <div className='p-2'><h4>To:</h4></div>
-                        <div className='p-2 w-100'><textarea className='p-1 w-100 my-1' placeholder='Search...' rows="1"></textarea></div>
+                        <div className='p-2 w-100'><textarea className={this.props.theme?"drak-head p-1 w-100 my-1":"p-1 w-100 my-1"} placeholder='Search...' rows="1"></textarea></div>
                     </div>
                 </header>
                 <div className='shareModelSuggested w-100 flex flex-col'>
@@ -86,7 +86,7 @@ export class ShareModal extends Component {
 
                     </div>
                 </div>
-                <div className='shareModelFooter w-100 p-2 sticky bottom-0 left-0'>
+                <div className={this.props.theme?"drak-head shareModelFooter w-100 p-2 sticky bottom-0 left-0":"shareModelFooter w-100 p-2 sticky bottom-0 left-0"}>
                     <button className='p-2 w-100 fw-bold hover'>Send</button>
                 </div>
             </div>

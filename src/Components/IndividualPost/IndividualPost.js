@@ -7,7 +7,7 @@ import MoreOptionPopUp from '../MoreOptionPopUp/MoreOptionPopUp'
 import CommentSection from '../CommentSection/CommentSection'
 import ShareModal from '../ShareModal/ShareModal'
 
-function IndividualPost({profilePhoto, postUrl, likes, username, description, commentCount, timeStamp, multiPost, loading }) {
+function IndividualPost({theme, profilePhoto, postUrl, likes, username, description, commentCount, timeStamp, multiPost, loading }) {
 
     const [like, setLike] = useState(false)
 
@@ -32,8 +32,8 @@ function IndividualPost({profilePhoto, postUrl, likes, username, description, co
 
     return (
         <>
-            <div className="individual-post">
-                <div className="post-header">
+            <div className={theme?"drak-head drak-border individual-post":"individual-post"}>
+                <div className={theme?"post-header":"post-header"}>
                     <div className="photo-username">
                         {
                             (loading)?(<><LazyLoading classN="photoLazyLoading" /><LazyLoading classN="postLazyUsername" /></>):(<><img src={profilePhoto} alt="dp" /><div className='pl-2 lowercase'>{username}</div></>)
@@ -45,7 +45,7 @@ function IndividualPost({profilePhoto, postUrl, likes, username, description, co
                     }
                     
                 </div>
-                <div className="post-img" >
+                <div className={theme?"drak-border-top post-img":"post-img"} >
                     {/* Single Post */}
                     {
                         (loading)?<LazyLoading classN="postImgLazyLoading"/>:!multiPost && <img src={postUrl} alt="post" onDoubleClick={() => setLike(!like)}/>  
@@ -75,10 +75,10 @@ function IndividualPost({profilePhoto, postUrl, likes, username, description, co
                         <div className="other-description"><span>{username}</span>{description}</div>
                         <div className="other-viwes">View all {commentCount} comments</div>
                         <div className="other-time">{timeStamp}</div>
-                        <div className="comment-section">
+                        <div className={theme?"drak-border-top comment-section":"comment-section"}>
                             <div className="icon-input">
                                 <div><SmileEmoji /></div>
-                                <div><input type="text" className="comment-input" placeholder="Add a Comment..." /></div>
+                                <div><input type="text" className={theme?"drak-head comment-input":"comment-input"} placeholder="Add a Comment..." /></div>
                             </div>
                             <div><input type="button" className="comment-input-button" value="Post" /></div>
                         </div>
@@ -88,7 +88,7 @@ function IndividualPost({profilePhoto, postUrl, likes, username, description, co
             </div>
             <MoreOptionPopUp openModel={openModel} />
             <CommentSection openComment={openComment} imgUrl={postUrl} profilePhoto={profilePhoto} username={username} likes={likes} timeStamp={timeStamp} multiPost={multiPost} setLike={setLike} like={like}/>
-            <ShareModal openShare={openShare}/>
+            <ShareModal openShare={openShare} theme={theme}/>
         </>
     )
 }
